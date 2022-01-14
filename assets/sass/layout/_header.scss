@@ -1,0 +1,129 @@
+#header_wrap{
+    .header_top{
+        background: $dark;
+        padding: 6px 0;
+        position: relative;
+        .header_right_shap{
+            clip-path: polygon(100% 1%, 100% 100%, 0 100%, 35% 0);
+            background: #4C3526;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 110px;
+            height: 100%;
+            &::after{
+                content: '';
+                clip-path: polygon(100% 1%, 100% 100%, 0 100%, 38% 0);
+                position: absolute;
+                width: 100px;
+                height: 100%;
+                background: #FE6600 !important;
+                z-index: 3;
+                top: 0;
+                right: 0;
+            }
+        }
+        .header_left_shap{
+            @extend .header_right_shap;
+            clip-path: polygon(70% 0, 100% 100%, 0 100%, 0 0);
+            left: 0;
+            &::after{
+                content: '';
+                clip-path: polygon(68% 0, 100% 100%, 0 100%, 0 0);
+                left: 0;
+            }
+
+        }
+        &_text{            
+            a{
+                font-size: 15px;
+                font-weight: 400;
+                color: $white;
+                margin-right: 40px;
+                .svg-icon{
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    background: #343434;
+                    display: inline-block;
+                    text-align: center;
+                    line-height: 38px;
+                    margin-right: 15px;
+                    svg{
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+    nav{
+        background: $white;
+        padding: 18px 0;
+
+        .logo h2{
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 55px;
+            color: $dark;
+            span{
+                color: $color;
+            }
+        }
+        .main_menu{
+            width: 100%;
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 30px;
+                line-height: 55px;
+                li{
+                    display: inline-block;
+                    // margin-right: 30px;
+                    a{
+                        font-size: 17px;
+                        font-weight: 600;
+                        color: $dark;
+                        transition: all linear 0.3s;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            transition: all linear 0.3s;
+                        }
+                        &:hover{
+                            color: $color;
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 3px;
+                                background: $color;
+                                left: 0;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact_info{
+            padding-left: 40px;
+            a{
+                font-size: 25px;
+                font-weight: 600;
+                color: $dark;
+                .svg-icon{
+                    display: inline-block;
+                    width: 55px;
+                    height: 55px;
+                    text-align: center;
+                    line-height: 55px;
+                    background: #FFF1E7;
+                    border-radius: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

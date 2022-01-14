@@ -1,0 +1,15 @@
+.button {
+    font-size: 16px;
+    background-color: $color;
+    color: $white;
+    padding: 12px 18px;
+    border-radius: 15px;
+    transition: all linear 0.3s;
+    i{
+      display: inline-block;
+      padding: 0 15px;
+    }
+    &:hover{
+      color: $white2;
+    }
+  }

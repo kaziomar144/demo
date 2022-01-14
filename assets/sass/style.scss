@@ -1,0 +1,19 @@
+// BASE
+@import './base/reset';
+@import './base/typography';
+
+// UTILS
+@import './utils/variables';
+
+// COMPONENTS
+@import './components/buttons';
+@import './components/icon';
+
+// LAYOUT
+@import './layout/header';
+
+// PAGES
+@import './pages/home';
+
+// VENDORS
+@import './vendors/bootstrap';

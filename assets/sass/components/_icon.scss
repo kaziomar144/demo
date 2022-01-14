@@ -1,0 +1,25 @@
+.social_icon {
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        li {
+            display: inline-block;
+            margin-left: 10px;
+
+            a {
+                border-radius: 50%;
+                background: $dark-shed;
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                color: $white;
+                transition: all linear 0.3s;
+                &:hover{
+                    color:$color;
+                }
+            }
+        }
+    }
+}
