@@ -1,5 +1,5 @@
 // =================================
-//       Banner section Start
+//       Banner section css Start
 // =================================
 #banner{
     padding: 140px 0 270px;
@@ -44,7 +44,7 @@
                     display: inline-block;
                     font-size: 35px;
                     font-weight: 900;
-                    padding: 20px 60px 20px 80px;
+                    padding: 20px 85px 20px 80px;
                     color: #fff;
                     border-right: 1px solid #FF8432;
                     &:last-child{
@@ -65,24 +65,121 @@
 
 
 // =================================
-//       Banner section End
+//       Banner section css End
 // =================================
 
 // =================================
-//       Banner section Start
+//       About section css Start
+// =================================
+#about{
+    padding: 140px 0 70px;
+    overflow: hidden;
+    .circle{
+        width: 195px;
+        height: 195px;
+        background: $color;
+        border-radius: 50%;
+        margin-bottom: 190px;
+    }
+    .triangle{
+        width: 0;
+        height: 0;
+        border-bottom: 193px solid $dark;
+        border-right: 193px solid transparent;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 11px;
+            height: 234px;
+            left: 555px;
+            top: -82px;
+            background: #EFEFEF;
+        }
+    }
+    .about_content{
+        h2{
+            font-size: 60px;
+            font-weight: 600;
+            color: #222;
+            span{
+                display: block;
+                &:last-of-type{
+                    color: $color;
+                }
+            }
+        }
+        p{
+            font-size: 15px;
+            line-height: 26px;
+            padding-top: 20px;
+            span{
+                display: block;
+                font-size: 17px;
+                font-weight: 500;
+                font-style: italic;
+                padding-top: 30px;
+            }
+        }
+        a{
+            margin-top: 30px;
+        }
+    }
+}
+
+// =================================
+//       About section css End
 // =================================
 
+// =================================
+//       services section css Start
+// =================================
+#services{
+    padding: 70px 0;
+    .heading{
+        width: 600px;
+        margin: 0 auto;
+        h2{
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 100px;
+            color: $dark;
+        }
+        p{
+            color: #747474;
+            font-size: 15px;
+        }
+    }
+    .service_wrap{
+        .service_content{
+            padding: 80px 30px;
+            h4{
+                font-size: 28px;
+                font-weight: 600;
+                line-height: 40px;
+                color:$dark;
+                padding-top: 15px;
+            }
+            p{
+                font-size: 15px;
+                line-height: 26px;
+                color: #3b3b3b;
+                padding-top: 20px;
+            }
+        }
+        hr{
+            width: 100%;
+            height: 8px;
+            background: $color;
+            border: none;
+            opacity: 1;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
 
 
 // =================================
-//       Banner section End
-// =================================
-// =================================
-//       Banner section Start
-// =================================
-
-
-
-// =================================
-//       Banner section End
+//       services section css End
 // =================================

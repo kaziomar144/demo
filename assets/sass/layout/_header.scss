@@ -9,13 +9,13 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 110px;
+            width: 8%;
             height: 100%;
             &::after{
                 content: '';
                 clip-path: polygon(100% 1%, 100% 100%, 0 100%, 38% 0);
                 position: absolute;
-                width: 100px;
+                width: 92%;
                 height: 100%;
                 background: #FE6600 !important;
                 z-index: 3;

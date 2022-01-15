@@ -13,3 +13,27 @@
       color: $white2;
     }
   }
+
+  .btn-srt{
+    width: 68px;
+    height: 68px;
+    background: #F9F9F9;
+    position: relative;
+    transition: all linear 0.3s;
+    i{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: $color;
+      transform: translate(-50%,-50%);
+      font-size: 20px;
+      transition: all linear 0.3s;
+    }
+    &:hover{
+      background: $color;
+      border-radius: 15px;
+      i{
+        color: $white;
+      }
+    }
+  }

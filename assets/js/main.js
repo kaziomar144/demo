@@ -1,5 +1,7 @@
 // banner area number counter
-$('.counter').countUp({
-  'time': 2000,
-  'delay': 10
+$(document).ready(function () {
+  $('.counter').countUp({
+    'time': 2000,
+    'delay': 10
+  });
 });
