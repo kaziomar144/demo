@@ -1,0 +1,201 @@
+/****************************************
+*     menu-mm                           *
+*****************************************/
+.show-up-after-992 {
+    display: none;
+
+    a {
+        display: inline-block;
+        float: left;
+        padding: 3px 0;
+        border: 1px solid #333;
+
+        span {
+            display: inline-block;
+            width: 30px;
+            height: 2px;
+            background: #333333;
+            margin: 3px 5px;
+            float: left;
+            clear: both;
+        }
+    }
+
+    @include media-mx-992 {
+        display: inline-block !important;
+    }
+}
+
+
+
+
+.mercado-clone-wrap {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    z-index: 100000;
+    box-shadow: 3px 5px 14px -3px rgba(0, 0, 0, 0.11);
+    overflow-x: hidden;
+    .mercado-panel {
+        border-color: #fff;
+        bottom: 0;
+        box-sizing: border-box;
+        display: block;
+        left: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: all 0.2s ease 0s;
+        z-index: 0;  
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+    
+        li {
+            list-style: none;
+            position: relative;
+            padding: 0 20px;
+            border-bottom: 1px solid #ddd;
+            transition: all linear 0.3s;
+            &:hover{
+                background: #ddd;
+            }
+        }
+    
+        >ul>li>a {
+            display: inline-block;
+            line-height: 50px;
+            text-transform: uppercase;
+            padding-right: 6px;
+            color: $dark;
+            span{
+                display: inline-block;
+                padding-left: 10px;
+            }
+    
+            &.icon {
+                right: -4px;
+                top: -9px;
+                float: right;
+                position: relative;
+            }
+        }
+    
+    }
+
+    .mercado-panels {
+        background: inherit;
+        border-color: inherit;
+        position: absolute;
+        margin-top: 50px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        box-sizing: border-box;
+    }
+}
+
+.mercado-clone-wrap .mercado-main-panel,
+.mercado-clone-wrap .mercado-panel.mercado-panel-opened {
+    transform: translateX(0);
+    z-index: 10;
+}
+.mercado-clone-wrap .mercado-sub-opened {
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mercado-panels-actions-wrap {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    position: relative;
+    .mercado-prev-panel {
+        right: inherit;
+        left: 0;
+        border: none;
+        border-right: 1px solid #eee;
+
+        &::before {
+            content: "\f104";
+            font-family: $icon-font;
+            font-weight: 600;
+        }
+    }
+    .mercado-current-panel-title{
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    padding: 0 50px;
+    text-transform: uppercase;
+    }
+    .mercado-close-btn{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        border-left: 1px solid #eee;
+        text-align: center;
+        line-height: 50px;
+        color: #666;
+    }
+    .mercado-prev-panel{
+        @extend .mercado-close-btn;
+    }
+
+}
+
+
+.mercado-next-panel {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    &::before {
+        content: "\f105";
+        font-family: $icon-font;
+        font-weight: 600;
+    }
+}
+
+@include media-mx-992{
+    .mercado-clone-wrap.open{
+        left:0;
+    }
+    .submenu.megamenu .wpb_single_image{
+        text-align: left;
+        max-width: 285px;
+        margin: 0 20px;
+    }
+    .mercado-panel .megamenu{
+        background-image: none!important;
+    }
+    .mercado-clone-wrap .btn-control{
+        display: none;
+    }
+    .mercado-clone-wrap .default-hiden{
+        display: list-item;
+    }
+}
+
+/****************************************
+*     menu-mm                           *
+*****************************************/

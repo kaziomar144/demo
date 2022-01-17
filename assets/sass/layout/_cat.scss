@@ -1,0 +1,42 @@
+#cat {
+    padding: 100px 0;
+    background: $color;
+
+    h3 {
+        color: $white;
+
+        font: {
+            size: 45px;
+            weight: 600;
+        }
+
+        line-height: 70px;
+
+        @include media-mx-992 {
+            font-size: 25px;
+            line-height: 38px;
+        }
+
+        @include media-mx-576 {
+            font-size: 23px;
+            line-height: 35px;
+        }
+    }
+
+    .button {
+        background: $black;
+    }
+
+    @include media-mx-992 {
+        padding: 80px 0;
+    }
+
+    @include media-mx-768 {
+        padding: 40px 0;
+
+        .col-md-8.mt-0.mb-0.mx-auto {
+            text-align: center;
+            margin-bottom: 20px !important;
+        }
+    }
+}

@@ -19,6 +19,12 @@
                 &:hover{
                     color:$color;
                 }
+                span{
+                    display: none;
+                    @include media-mx-992{
+                        display: inline-block;
+                    }
+                }
             }
         }
     }

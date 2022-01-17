@@ -4,6 +4,7 @@
 
 // UTILS
 @import './utils/variables';
+@import './utils/mixins';
 
 // COMPONENTS
 @import './components/buttons';
@@ -11,6 +12,12 @@
 
 // LAYOUT
 @import './layout/header';
+@import './layout/team';
+@import './layout/request-cell';
+@import './layout/testimonial';
+@import './layout/cat';
+@import './layout/footer';
+@import './layout/mobile-menu';
 
 // PAGES
 @import './pages/home';
