@@ -12,6 +12,9 @@
             color: $color;
             font-size: 20px;
             font-weight: 600;
+            @include media-mx-576{
+                font-size: 14px;
+            }
         }
         h1{
             color: $white;

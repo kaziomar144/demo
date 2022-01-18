@@ -797,7 +797,8 @@ h6 {
 
 @media (max-width: 768px) {
   #testimonial .testimonial_wrap .testimonialt_content {
-    padding-top: 20px;
+    padding: 20px 5px 0;
+    margin-left: 0;
   }
 }
 
@@ -1046,7 +1047,7 @@ h6 {
 
 @media (max-width: 768px) {
   #footer_section .foot_wrap {
-    padding: 10px 15px;
+    padding: 10px 25px;
   }
 }
 
@@ -1413,6 +1414,12 @@ h6 {
   color: #FE6600;
   font-size: 20px;
   font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  #banner .banner_wrap p {
+    font-size: 14px;
+  }
 }
 
 #banner .banner_wrap h1 {

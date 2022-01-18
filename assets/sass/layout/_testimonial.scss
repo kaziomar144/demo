@@ -43,7 +43,8 @@
                 padding-top: 0;
             }
             @include media-mx-768{
-               padding-top: 20px;
+               padding: 20px 5px 0;
+               margin-left: 0;
             }
         }
     }
