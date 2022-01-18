@@ -6,6 +6,7 @@
             overflow: hidden;
             img{
                 transition: all linear 0.3s;
+                width: 100%;
             }
             &::after{
                 content: '';

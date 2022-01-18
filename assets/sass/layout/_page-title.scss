@@ -1,0 +1,44 @@
+#page-title{
+   padding: 40px 0;
+   margin-bottom: 35px;
+   background: $black;
+   .entry-title{
+       padding: 20px 0;
+       h1{
+           font-size: 75px;
+           font-weight: 600;
+           line-height: 110px;
+           color: $white;
+           @include media-mx-768{
+               font-size: 60px;
+               line-height: 60px;
+           }
+           @include media-mx-576{
+            font-size: 44px;
+            line-height: normal;
+           }
+       }
+       ul{
+        li{
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 36px;
+            color: $white;
+            .delimiter{
+                display: inline-block;
+                padding: 0 5px;
+                color: $color;
+            }
+            a{
+                color: $white;
+                transition: all linear 0.3s;
+                &:hover{
+                    color: $color;
+                }
+            }
+        }
+
+    }
+   }
+}

@@ -1,0 +1,152 @@
+// =================================
+//       About section css Start
+// =================================
+#about{
+    .our_mission{
+        width: 100%;
+        height: 100%;
+        background: $bg-c;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        padding: 30px 50px;
+        p{
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 70px;
+            padding: 20px 0 60px;
+            cursor: pointer;
+            transition: 0.4s;
+            i{
+                display: none;
+                transition: 0.4s;
+            }
+            &:hover{
+                padding-right: 20px;
+                i{
+                    display: inline-block;
+                    margin-left: 20px;
+                }
+            }
+            @include media-mx-768{
+                font-size: 30px;
+                line-height: 35px;
+                padding: 10px 0;
+            }
+        }
+        @include media-mx-992{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    .about_content{
+        h2{
+            font-size: 55px;
+            @include media-mx-768{
+                font-size: 40px;
+            }
+        }
+        p{
+            span{
+                font-size: 15px;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+        .customer_wrap{
+            max-width: 100%;
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            
+            .customer{
+                padding: 40px 0;
+                padding-left: 40px;
+                -ms-flex-item-align: end;
+                align-self: flex-end;
+                max-width: 310px;
+                width: 100%;
+                height: 100%;
+                background: $bg-c;
+                border-left: 10px solid $color;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                p{
+                    font-size: 40px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    color: #292929;
+                    sup{
+                        color: $color;
+                    }
+                    strong{
+                        display: block;
+                        font-size: 20px;
+                    }
+                    @media (max-width: 280px) {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+                }
+                @include media-mx-576{
+                    max-width: 255px;
+                }
+               
+            }
+            .dots{
+                width: 73px;
+                height: 73px;
+                align-self: center;
+                display: flex;
+                justify-content: space-between;
+                align-content: space-between;
+                flex-wrap: wrap;
+                span{
+                    width: 13px;
+                    height: 13px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    background: $color;
+                    margin-right: 12px;
+                    opacity: 0.2;
+                    &:nth-child(3n+0){
+                        margin-right: 0px;
+                    }
+                    &:nth-child(even){
+                        background: $black;
+                    }
+                }
+            }
+            @include media-mx-576{
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+
+// =================================
+//       About section css End
+// =================================
+
+
+
+// =================================
+//       CAT section css Start
+// =================================
+.ap_cta{
+    background: $bg-c !important;
+    h3{
+        color: $dark !important;
+        span{
+            color: $color !important;
+        }
+    }
+    .button{
+        background: $color !important;
+    }
+}
+// =================================
+//       CAT section css End
+// =================================

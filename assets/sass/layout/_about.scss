@@ -1,0 +1,91 @@
+// =================================
+//       About section css Start
+// =================================
+#about{
+    padding: 35px 0;
+    overflow: hidden;
+    .circle{
+        width: 195px;
+        height: 195px;
+        background: $color;
+        border-radius: 50%;
+        margin-bottom: 190px;
+        @include media-mx-992{
+            margin: 0 auto;
+        }
+    }
+    .triangle{
+        width: 0;
+        height: 0;
+        border-bottom: 193px solid $dark;
+        border-right: 193px solid transparent;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 11px;
+            height: 234px;
+            left: 555px;
+            top: -82px;
+            background: #EFEFEF;
+            @include media-mx-992{
+                display: none;
+            }
+        }
+        @include media-mx-992{
+            margin: 0 auto;
+        }
+    }
+    .about_content{
+        h2{
+            font-size: 60px;
+            font-weight: 600;
+            color: #222;
+            span{
+                display: block;
+                &:last-of-type{
+                    color: $color;
+                    display: inline-block;
+                }
+                @include media-mx-992{
+                    display: inline-block;
+                }
+            }
+            @include media-mx-992{
+                font-size: 40px;
+            }
+        }
+        p{
+            font-size: 15px;
+            line-height: 26px;
+            padding-top: 20px;
+            span{
+                display: block;
+                font-size: 17px;
+                font-weight: 500;
+                font-style: italic;
+                padding-top: 30px;
+                @include media-mx-992{
+                    padding-top: 15px;
+                }
+            }
+            @include media-mx-992{
+                padding-top: 10px;
+            }
+        }
+        a{
+            margin-top: 30px;
+        }
+        @include media-mx-992{
+            padding-top: 25px;
+            text-align: center;
+        }
+    }
+    @include media-mx-992{
+            padding: 90px 0 15px;
+    }
+}
+
+// =================================
+//       About section css End
+// =================================

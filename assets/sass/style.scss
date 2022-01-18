@@ -12,15 +12,18 @@
 
 // LAYOUT
 @import './layout/header';
+@import './layout/about';
 @import './layout/team';
 @import './layout/request-cell';
 @import './layout/testimonial';
-@import './layout/cat';
+@import './layout/cta';
 @import './layout/footer';
 @import './layout/mobile-menu';
+@import './layout/page-title';
 
 // PAGES
 @import './pages/home';
+@import './pages/about';
 
 // VENDORS
 @import './vendors/bootstrap';

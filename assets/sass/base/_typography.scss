@@ -2,9 +2,11 @@
 
 // Font Family Variable with Value
 // font-family:'Roboto', sans-serif;
-$body-font: 'Roboto', sans-serif;
+$body-font: 'Roboto',
+sans-serif;
 $dark: #2D2D2D;
-body{
+
+body {
     font-family: $body-font;
     font-size: 16px;
     font-weight: 400;
@@ -21,26 +23,35 @@ h5,
 h6 {
     font-family: $body-font;
     margin: 0px;
-    font-weight: 600;    
+    font-weight: 600;
     color: $dark;
 }
 
 // common heading
-.heading{
+.heading {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
-    h2{
+
+    h2 {
         font-size: 60px;
         font-weight: 600;
         line-height: 100px;
         color: $dark;
+
         @media (max-width: 768px) {
             font-size: 42px;
             line-height: 60px;
         }
+
+        @media (max-width: 576px) {
+            font-size: 35px;
+            line-height: 50px;
+
+        }
     }
-    p{
+
+    p {
         color: #747474;
         font-size: 15px;
     }
