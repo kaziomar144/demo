@@ -1,111 +1,182 @@
 #service_section {
     padding: 35px 0;
+    overflow: hidden;
+
+    .service_left {
+        padding-right: 20px;
+        overflow: hidden;
+        @include media-mx-992{
+            padding-right: 10px;
+        }
+    }
+
+    .service_right {
+       padding-left: 50px;
+        overflow: hidden;
+        @include media-mx-992{
+            padding-left: 10px;
+        }
+    }
 
     .service_wrap {
         h3 {
-            font-size: 60px;
-            font-weight: 600;
-            line-height: 70px;
+            @include fontPack(60,600,70);
             color: $dark;
 
             span {
                 display: inline-block;
                 -webkit-text-stroke: 1px black;
-                color: $white; 
+                color: $white;
+            }
+            @include media-mx-992{
+                @include fontPack(42,0,55);
+            }
+            @include media-mx-576{
+                @include fontPack(35,0,33);
             }
         }
-        p{
+
+        p {
             font-size: 16px;
             line-height: 26px;
             color: #3b3b3b;
             padding: 10px 0;
         }
-        .ser-img{
-           position: relative;
-           padding: 15px 0;
-           img{
-               width: 100%;
-               height: 100%;
-           } 
-           .sr-icon{
-               display: inline-block;
-               width: 100px;
-               height: 100px;
-               background: $color;
-               position: absolute;
-               bottom: 20px;
-               left: 20px;
-               svg{
-                   position: absolute;
-                   top: 50%;
-                   left: 50%;
-                   transform: translate(-50%,-50%);
-               }
-           }
-        }
-    }
-    .service_content{
-        padding-top: 20px;
-        h4{
-            font-size: 35px;
-            font-weight: 600;
-            line-height: 70px;
-            color: #222;
-        }
-        p{
-            font-size: 16px;
-            line-height: 26px;
-            color: #3b3b3b;
-            span{
-                display: block;
-                padding-top: 25px;
-            }
-        }
-    }
-    .sr-btn{
-        margin-top: 30px;
-        width: 100%;
-        button{
-            width: 100%;
-            border-radius: unset;
-            border: none;
-            padding: 15px 0;
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 70px;
-            background: $dark;
-            transition: all linear 0.3s;
+
+        .ser-img {
             position: relative;
-            z-index: 99;
-            &::after{
-                content: '';
-                width: 100%;
-                height: 100%;
-                position: absolute;
+
+            img {
+                @include square(100%);
+            }
+
+            .sr-icon {
+                display: inline-block;
+                @include square(100px);
                 background: $color;
-                opacity: 0.9;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                visibility: hidden;
-                transition: all linear 0.3s;
-            }
-            i{
-                display: none;
-                transition: all linear 0.3s;
-            }
-            &:hover{
-                background: url(../img/bg.img) no-repeat;
-                padding: 15px 0;
-                &::after{
-                    visibility: visible;
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @include media-mx-992{
+                        @include widthHeight(29px,39px);
+                    }
                 }
-                i{
-                    display: inline-block;
+                @include media-mx-992{
+                    @include square(80px);
                 }
             }
         }
     }
 
-   
+    .service_content {
+        padding-top: 20px;
+
+        h4 {
+            @include fontPack(35, 600, 70);
+            color: #222;
+            @include media-mx-992{
+                @include fontPack(30,0,55);
+            }
+            @include media-mx-768{
+                @include fontPack(25,0,35);
+            }
+        }
+
+        p {
+            @include fontPack(16, 0, 26);
+            color: #3b3b3b;
+
+            span {
+                display: block;
+                padding-top: 25px;
+            }
+        }
+    }
+
+    .sr-btn {
+        margin-top: 30px;
+        width: 100%;
+
+        button {
+            border-radius: unset;
+            @include fontPack(40, 600, 70);
+            color: $white;
+            background: $dark;
+            @include media-mx-992{
+                @include fontPack(30, 0, 60);
+            }
+            @include media-mx-576{
+                @include fontPack(25, 0, 30);
+            }
+        }
+    }
+
+    aside.service_sidebar {
+        .side_menu {
+            h3 {
+                @include fontPack(35, 600, 70);
+                color: $dark-2;
+            }
+
+            ul {
+                margin-top: 20px;
+
+                li {
+                    margin: 10px;
+                    padding: 0 15px;
+                    background: $bg-c;
+                    a{
+                        @include fontPack(17,600,70);
+                        color: $dark-2;
+                        transition: all linear 0.3s;
+                    }
+                    &:hover a{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .service_cta{
+            margin-top: 100px;
+            overflow: hidden;
+            background: $bg-c;
+            padding: 60px 20px;
+            text-align: center;
+            P{
+                color: $color;
+                @include fontPack(15,600);
+                text-transform: uppercase;
+            }
+            h3{
+                @include fontPack(42,600,60);
+                color: $black-2;
+                padding: 15px 35px;
+                @include media-mx-992{
+                    padding: 15px 0;
+                }
+                @include media-mx-768{
+                    padding: 15px 70px;
+                }
+            }
+            .button{
+                margin-top: 15px;
+            }
+            @include media-mx-768{
+                margin-top: 50px;
+            }
+        }
+        @include media-mx-768{
+            margin-bottom: 20px;
+        }
+    }
+    @include media-mx-768{
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
 }

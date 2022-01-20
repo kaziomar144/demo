@@ -11,9 +11,7 @@
         text-align: right;
         padding: 30px 50px;
         p{
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 70px;
+            @include fontPack(40,600,70);
             padding: 20px 0 60px;
             cursor: pointer;
             transition: 0.4s;
@@ -49,8 +47,7 @@
         }
         p{
             span{
-                font-size: 15px;
-                font-weight: 400;
+               @include fontPack(15,400,0);
                 font-style: normal;
             }
         }
@@ -74,9 +71,7 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 p{
-                    font-size: 40px;
-                    font-weight: 600;
-                    line-height: 30px;
+                    @include fontPack(40,600,30);
                     color: #292929;
                     sup{
                         color: $color;

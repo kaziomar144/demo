@@ -14,16 +14,14 @@
                line-height: 60px;
            }
            @include media-mx-576{
-            font-size: 44px;
+            font-size: 30px;
             line-height: normal;
            }
        }
        ul{
         li{
             display: inline-block;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 36px;
+            @include fontPack(20,500,36);
             color: $white;
             .delimiter{
                 display: inline-block;
@@ -37,8 +35,20 @@
                     color: $color;
                 }
             }
+            @include media-mx-576{
+                @include fontPack(15,0,28);
+            }
         }
 
     }
+    @include media-mx-576{
+        padding: 15px 0;
+    }
+   }
+   @include media-mx-768{
+    margin-bottom: 10px;
+   }
+   @include media-mx-576{
+    padding: 15px 0;
    }
 }

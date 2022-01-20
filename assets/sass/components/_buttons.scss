@@ -15,8 +15,7 @@
   }
 
   .btn-srt{
-    width: 68px;
-    height: 68px;
+    @include square(68px);
     background: #F9F9F9;
     position: relative;
     transition: all linear 0.3s;
@@ -36,4 +35,40 @@
         color: $white;
       }
     }
+  }
+
+  .btn-bg{
+            width: 100%;
+            border: none;
+            padding: 15px 0;
+            color: $white;
+            transition: all linear 0.3s;
+            position: relative;
+            z-index: 99;
+            &::after{
+               @include pseudo;
+               @include square(100%);
+                background: $color;
+                opacity: 0.9;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                visibility: hidden;
+                transition: all linear 0.3s;
+            }
+            i{
+                display: none;
+                transition: all linear 0.3s;
+            }
+            &:hover{
+                background: url(../img/bg.img) no-repeat center/cover !important;
+                padding: 15px 0;
+                &::after{
+                    visibility: visible;
+                }
+                i{
+                    display: inline-block;
+                }
+            }
+        
   }

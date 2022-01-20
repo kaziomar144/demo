@@ -1,9 +1,45 @@
+@mixin fontPack($fontSize: 0,$fontWeight: 0,$lineHight: 0) {
+  @if $fontSize > 0 {
+    font-size : $fontSize#{px};
+  }
+  @if $fontWeight > 0 {
+    font-weight : $fontWeight;
+  }
+  @if $lineHight > 0 {
+    line-height : $lineHight#{px};
+  }
+  
+}
+
+@mixin widthHeight($width,$hight) {
+  width: $width;
+  height: $hight;
+}
+
+@mixin  square($size) {
+  width: $size;
+  height: $size;
+}
+@mixin  circle($size,$radius) {
+  width: $size;
+  height: $size;
+  border-radius: $radius;
+}
+
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+
 @mixin media-mx-576 {
-    @media (max-width: 576px) { @content; }
+    @media only screen and (max-width: 576px) { @content; }
   }
   @mixin media-mx-768 {
-    @media (max-width: 768px) { @content; }
+    @media only screen and (max-width: 768px) { @content; }
   }
   @mixin media-mx-992 {
-    @media (max-width: 992px) { @content; }
+    @media only screen and (max-width: 992px) { @content; }
   }
