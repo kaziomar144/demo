@@ -40,42 +40,7 @@
             }
         }
     }
-    form{
-        padding-top: 70px;
-        text-align: center;
-        .form-grp{
-            margin-top: 20px;
-            input{
-                border: none;
-                background: #FE6600;
-                padding: 20px;
-                box-shadow: none;
-                border-radius: 15px;
-                color: #FFF6F0;
-
-                &::placeholder{
-                    color: #FFF6F0;
-                    font-size: 15px;
-                }
-            }
-            @include media-mx-576{
-                margin-top: 0;
-            }
-        }
-        button{
-            outline: none;
-            border: none;
-            background: $black;
-            margin-top: 20px;
-        }
-        @include media-mx-576{
-            padding-top: 25px;
-            .col{
-                flex: 1 0 100%;
-                margin-top: 20px;
-            }
-        }
-    }
+    
     @include media-mx-768{
         padding: 8px 0;
     }

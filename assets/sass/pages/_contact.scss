@@ -1,0 +1,109 @@
+#contact_section {
+    padding: 35px 0;
+    overflow: hidden;
+
+    aside {
+        .side_info {
+            background: $bg-c;
+            padding: 50px;
+
+            &:last-of-type{
+                margin-top: 30px;
+                background: $dark-2;
+                h3,a{
+                    color: $white;
+                }
+            }
+
+            h3 {
+                @include fontPack(30, 600, 45);
+                color: $dark-2;
+            }
+            ul{
+                padding-top: 30px;
+                li{
+                    position: relative;
+                    padding: 10px 0;
+                    span{
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                        top: 11px;;
+                        svg{
+                            @include square(20px);
+                        }
+                    }
+                    a{
+                        @include fontPack(15,400,30);
+                       color: $gray;
+                       padding-left: 40px;
+                       transition: all linear 0.3s;
+                        &:hover{
+                            color: $color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact_form{
+        h2{
+            @include fontPack(60, 600, 70);
+                color: $black-2;
+
+                span {
+                    -webkit-text-stroke: 1px $black-2;
+                    color: $white;
+                }
+
+                @include media-mx-768 {
+                    @include fontPack(35, 600, 42);
+                }
+        }
+        p{
+            @include fontPack(16);
+            color: $gray;
+            margin-top: 20px;
+        }
+        form.contest-form{
+            padding-top: 40px;
+            input,textarea{
+                border: 1px solid #efefef;
+                background: $white;
+                &::placeholder{
+                    color: $gray;
+                    font-size: 16px;
+                }
+                &:focus{
+                    border-color: $color;
+                }
+            }
+            .button{
+                margin-top: 40px;
+                background: $color;
+            }
+        }
+    }
+}
+
+#g-map{
+    padding: 35px 0 70px;
+    overflow: hidden;
+    .mapouter {
+        position: relative;
+        text-align: right;
+        height: 450px;
+        max-width: 100%;
+       
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 450px;
+            max-width: 100%;
+
+            iframe{
+                @include square(100%)
+            }
+        }
+    }
+}

@@ -93,6 +93,29 @@ h6 {
   font-size: 15px;
 }
 
+.col-left {
+  padding-right: 50px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+  .col-left {
+    padding-right: 10px;
+  }
+}
+
+.col-right {
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+  .col-right {
+    padding-left: 10px;
+    margin-top: 50px;
+  }
+}
+
 .button {
   font-size: 16px;
   background-color: #FE6600;
@@ -733,16 +756,22 @@ h6 {
   color: #343434;
 }
 
-#request_cell form {
+@media only screen and (max-width: 768px) {
+  #request_cell {
+    padding: 8px 0;
+  }
+}
+
+form.contest-form {
   padding-top: 70px;
   text-align: center;
 }
 
-#request_cell form .form-grp {
+form.contest-form .form-grp {
   margin-top: 20px;
 }
 
-#request_cell form .form-grp input {
+form.contest-form .form-grp input, form.contest-form .form-grp textarea {
   border: none;
   background: #FE6600;
   padding: 20px;
@@ -752,33 +781,33 @@ h6 {
   color: #FFF6F0;
 }
 
-#request_cell form .form-grp input::-webkit-input-placeholder {
+form.contest-form .form-grp input::-webkit-input-placeholder, form.contest-form .form-grp textarea::-webkit-input-placeholder {
   color: #FFF6F0;
   font-size: 15px;
 }
 
-#request_cell form .form-grp input:-ms-input-placeholder {
+form.contest-form .form-grp input:-ms-input-placeholder, form.contest-form .form-grp textarea:-ms-input-placeholder {
   color: #FFF6F0;
   font-size: 15px;
 }
 
-#request_cell form .form-grp input::-ms-input-placeholder {
+form.contest-form .form-grp input::-ms-input-placeholder, form.contest-form .form-grp textarea::-ms-input-placeholder {
   color: #FFF6F0;
   font-size: 15px;
 }
 
-#request_cell form .form-grp input::placeholder {
+form.contest-form .form-grp input::placeholder, form.contest-form .form-grp textarea::placeholder {
   color: #FFF6F0;
   font-size: 15px;
 }
 
 @media only screen and (max-width: 576px) {
-  #request_cell form .form-grp {
+  form.contest-form .form-grp {
     margin-top: 0;
   }
 }
 
-#request_cell form button {
+form.contest-form button {
   outline: none;
   border: none;
   background: #000;
@@ -786,20 +815,14 @@ h6 {
 }
 
 @media only screen and (max-width: 576px) {
-  #request_cell form {
+  form.contest-form {
     padding-top: 25px;
   }
-  #request_cell form .col {
+  form.contest-form .col {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
     margin-top: 20px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  #request_cell {
-    padding: 8px 0;
   }
 }
 
@@ -2191,29 +2214,6 @@ h6 {
   padding: 35px 0;
 }
 
-#details_section .col-left {
-  padding-right: 50px;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 992px) {
-  #details_section .col-left {
-    padding-right: 10px;
-  }
-}
-
-#details_section .col-right {
-  padding-left: 20px;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 992px) {
-  #details_section .col-right {
-    padding-left: 10px;
-    margin-top: 50px;
-  }
-}
-
 #details_section aside .side_info {
   background: #F9F9F9;
   padding: 50px;
@@ -2525,5 +2525,248 @@ h6 {
   #related_case .col-md-4 {
     margin-bottom: 35px;
   }
+}
+
+#contact_section {
+  padding: 35px 0;
+  overflow: hidden;
+}
+
+#contact_section aside .side_info {
+  background: #F9F9F9;
+  padding: 50px;
+}
+
+#contact_section aside .side_info:last-of-type {
+  margin-top: 30px;
+  background: #292929;
+}
+
+#contact_section aside .side_info:last-of-type h3, #contact_section aside .side_info:last-of-type a {
+  color: #fff;
+}
+
+#contact_section aside .side_info h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 45px;
+  color: #292929;
+}
+
+#contact_section aside .side_info ul {
+  padding-top: 30px;
+}
+
+#contact_section aside .side_info ul li, #contact_section aside .side_info #request_cell .cell_content .info ul li a, #request_cell .cell_content .info #contact_section aside .side_info ul li a {
+  position: relative;
+  padding: 10px 0;
+}
+
+#contact_section aside .side_info ul li span, #contact_section aside .side_info #request_cell .cell_content .info ul li a span, #request_cell .cell_content .info #contact_section aside .side_info ul li a span {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 11px;
+}
+
+#contact_section aside .side_info ul li span svg, #contact_section aside .side_info #request_cell .cell_content .info ul li a span svg, #request_cell .cell_content .info #contact_section aside .side_info ul li a span svg {
+  width: 20px;
+  height: 20px;
+}
+
+#contact_section aside .side_info ul li a, #contact_section aside .side_info #request_cell .cell_content .info ul li a a, #request_cell .cell_content .info #contact_section aside .side_info ul li a a {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #747474;
+  padding-left: 40px;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+#contact_section aside .side_info ul li a:hover {
+  color: #FE6600;
+}
+
+#contact_section .contact_form h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 70px;
+  color: #222;
+}
+
+#contact_section .contact_form h2 span {
+  -webkit-text-stroke: 1px #222;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  #contact_section .contact_form h2 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 42px;
+  }
+}
+
+#contact_section .contact_form p {
+  font-size: 16px;
+  color: #747474;
+  margin-top: 20px;
+}
+
+#contact_section .contact_form form.contest-form {
+  padding-top: 40px;
+}
+
+#contact_section .contact_form form.contest-form input, #contact_section .contact_form form.contest-form textarea {
+  border: 1px solid #efefef;
+  background: #fff;
+}
+
+#contact_section .contact_form form.contest-form input::-webkit-input-placeholder, #contact_section .contact_form form.contest-form textarea::-webkit-input-placeholder {
+  color: #747474;
+  font-size: 16px;
+}
+
+#contact_section .contact_form form.contest-form input:-ms-input-placeholder, #contact_section .contact_form form.contest-form textarea:-ms-input-placeholder {
+  color: #747474;
+  font-size: 16px;
+}
+
+#contact_section .contact_form form.contest-form input::-ms-input-placeholder, #contact_section .contact_form form.contest-form textarea::-ms-input-placeholder {
+  color: #747474;
+  font-size: 16px;
+}
+
+#contact_section .contact_form form.contest-form input::placeholder, #contact_section .contact_form form.contest-form textarea::placeholder {
+  color: #747474;
+  font-size: 16px;
+}
+
+#contact_section .contact_form form.contest-form input:focus, #contact_section .contact_form form.contest-form textarea:focus {
+  border-color: #FE6600;
+}
+
+#contact_section .contact_form form.contest-form .button {
+  margin-top: 40px;
+  background: #FE6600;
+}
+
+#g-map {
+  padding: 35px 0 70px;
+  overflow: hidden;
+}
+
+#g-map .mapouter {
+  position: relative;
+  text-align: right;
+  height: 450px;
+  max-width: 100%;
+}
+
+#g-map .mapouter .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 450px;
+  max-width: 100%;
+}
+
+#g-map .mapouter .gmap_canvas iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*======================
+    404 page
+=======================*/
+#page_404 {
+  padding: 40px 0;
+  background: #fff;
+}
+
+#page_404 .four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+#page_404 .four_zero_four_bg h1 {
+  font-size: 80px;
+  color: #2D2D2D;
+}
+
+#page_404 .four_zero_four_bg h1 span:nth-child(2) {
+  color: #FE6600;
+}
+
+#page_404 .contant_box_404 {
+  position: relative;
+}
+
+#page_404 .contant_box_404::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 10px;
+  background: #F9F9F9;
+  top: -75px;
+  left: 0;
+}
+
+#page_404 .contant_box_404 h3 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 70px;
+  color: #222;
+}
+
+@media only screen and (max-width: 992px) {
+  #page_404 .contant_box_404 h3 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #page_404 .contant_box_404 h3 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
+#page_404 .contant_box_404 p {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 70px;
+  color: #747474;
+}
+
+@media only screen and (max-width: 992px) {
+  #page_404 .contant_box_404 p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #page_404 .contant_box_404 p {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #page_404 .contant_box_404 div:first-of-type {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

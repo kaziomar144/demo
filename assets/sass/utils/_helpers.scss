@@ -1,0 +1,18 @@
+.col-left {
+    padding-right: 50px;
+    overflow: hidden;
+
+    @include media-mx-992 {
+        padding-right: 10px;
+    }
+}
+
+.col-right {
+    padding-left: 20px;
+    overflow: hidden;
+
+    @include media-mx-992 {
+        padding-left: 10px;
+        margin-top: 50px;
+    }
+}

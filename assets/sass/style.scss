@@ -5,6 +5,7 @@
 // UTILS
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/helpers';
 
 // COMPONENTS
 @import './components/buttons';
@@ -15,6 +16,7 @@
 @import './layout/about';
 @import './layout/team';
 @import './layout/request-cell';
+@import './layout/form';
 @import './layout/testimonial';
 @import './layout/cta';
 @import './layout/footer';
@@ -27,6 +29,8 @@
 @import './pages/about';
 @import './pages/service';
 @import './pages/case_details';
+@import './pages/contact';
+@import './pages/404';
 
 // VENDORS
 @import './vendors/bootstrap';
