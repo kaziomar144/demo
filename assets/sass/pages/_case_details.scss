@@ -1,0 +1,273 @@
+#details_section {
+    .col-left {
+        padding-right: 50px;
+        overflow: hidden;
+
+        @include media-mx-992 {
+            padding-right: 10px;
+        }
+    }
+
+    .col-right {
+        padding-left: 20px;
+        overflow: hidden;
+
+        @include media-mx-992 {
+            padding-left: 10px;
+            margin-top: 50px;
+        }
+    }
+
+    aside {
+        .side_info {
+            background: $bg-c;
+            padding: 50px;
+
+            h3 {
+                @include fontPack(30, 600, 45);
+                color: $dark-2;
+
+                span {
+                    color: $color;
+                }
+            }
+
+            ul {
+                padding-top: 30px;
+
+                li {
+                    @include fontPack(15, 400, 40);
+                    color: #717171;
+                    text-align-last: justify;
+
+                    strong {
+                        color: $dark-2;
+                        display: inline-block;
+                        width: 80px;
+                    }
+
+                    span {
+                        display: inline-block;
+                        margin-left: 10px;
+
+                    }
+
+                    a {
+                        color: $color;
+                    }
+                }
+            }
+
+        }
+
+        .sidebar_sec_cta {
+            background: $dark-2;
+
+            h3 {
+                color: $white;
+            }
+        }
+    }
+
+    .details-content {
+        .content-img {
+            @include square(100%);
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 10px solid $bg-c;
+        }
+
+        .thum {
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+
+
+            li {
+                margin-right: 20px;
+                display: inline-block;
+                position: relative;
+                transition: all linear 0.3s;
+                max-width: 100px;
+
+                img {
+                    @include square(100%);
+                }
+
+                &::after {
+                    @include pseudo(block, absolute, "+");
+                    font-size: 20px;
+                    color: $white;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    visibility: hidden;
+                    transition: all linear 0.3s;
+                }
+
+                &::before {
+                    @include pseudo;
+                    @include square(100%);
+                    left: 0;
+                    top: 0;
+                    background: $color;
+                    opacity: 0.9;
+                    transform: scale(0);
+                    transition: all linear 0.3s;
+                }
+
+                &:hover {
+                    &::after {
+                        visibility: visible;
+                    }
+
+                    &::before {
+                        transform: scale(1);
+                    }
+                }
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+
+
+        }
+
+        .content-wrap {
+            padding: 20px 0;
+            overflow: hidden;
+
+            h2 {
+                @include fontPack(60, 600, 70);
+                color: $black-2;
+
+                span {
+                    -webkit-text-stroke: 1px $black-2;
+                    color: $white;
+                }
+
+                @include media-mx-768 {
+                    @include fontPack(35, 600, 42);
+                }
+            }
+
+            h3 {
+                @include fontPack(35, 600, 70);
+                color: $black-2;
+                @include media-mx-768 {
+                    @include fontPack(25,0,30);
+                }
+            }
+
+            p {
+                @include fontPack(16, 400, 26);
+                padding: 20px 0;
+                text-align: justify !important;
+
+                span {
+                    display: block;
+                    padding: 20px 0 0;
+                }
+            }
+
+            .cnt-img {
+                float: right;
+                padding: 25px 0 30px 25px;
+                clear: both;
+                overflow: hidden;
+                @include media-mx-768{
+                    padding: 25px 0 25px 25px;
+                }
+            }
+        }
+    }
+}
+
+#related_case {
+    padding: 35px 0;
+    overflow: hidden;
+
+    .row {
+        margin-top: 50px;
+    }
+
+    .related-img {
+        position: relative;
+        transition: all linear 0.3s;
+        border: 5px solid transparent;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .triangle {
+            @include square(0);
+            border-bottom: 193px solid $color;
+            border-right: 193px solid transparent;
+            position: absolute;
+            opacity: 0;
+            left: 0;
+            bottom: 0;
+            transition: all linear 0.3s;
+
+            .btn-srt {
+                position: absolute;
+                background: $white;
+                left: 20px;
+                top: 110px;
+                color: $color;
+                border-radius: 15px !important;
+
+                &:hover i {
+                    color: $color !important;
+                }
+            }
+        }
+
+        &:hover {
+            border-color: $color;
+
+            .triangle {
+                opacity: 1;
+            }
+        }
+
+        @include media-mx-768 {
+            max-width: 85%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    .row p {
+        @include fontPack(14, 600, 26);
+        letter-spacing: 0.56px;
+        color: $color;
+        padding-top: 30px;
+
+        @include media-mx-768 {
+            text-align: center;
+            padding-top: 15px;
+        }
+    }
+
+    h3 {
+        @include fontPack(25, 600, 0);
+        color: $dark-2;
+        padding: 5px 0;
+
+        @include media-mx-768 {
+            text-align: center;
+            padding: 0;
+        }
+
+    }
+
+    @include media-mx-768 {
+        .col-md-4 {
+            margin-bottom: 35px;
+        }
+    }
+}

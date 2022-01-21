@@ -99,23 +99,6 @@
         }
     }
 
-    .sr-btn {
-        margin-top: 30px;
-        width: 100%;
-
-        button {
-            border-radius: unset;
-            @include fontPack(40, 600, 70);
-            color: $white;
-            background: $dark;
-            @include media-mx-992{
-                @include fontPack(30, 0, 60);
-            }
-            @include media-mx-576{
-                @include fontPack(25, 0, 30);
-            }
-        }
-    }
 
     aside.service_sidebar {
         .side_menu {
@@ -140,35 +123,6 @@
                         color: $white;
                     }
                 }
-            }
-        }
-        .service_cta{
-            margin-top: 100px;
-            overflow: hidden;
-            background: $bg-c;
-            padding: 60px 20px;
-            text-align: center;
-            P{
-                color: $color;
-                @include fontPack(15,600);
-                text-transform: uppercase;
-            }
-            h3{
-                @include fontPack(42,600,60);
-                color: $black-2;
-                padding: 15px 35px;
-                @include media-mx-992{
-                    padding: 15px 0;
-                }
-                @include media-mx-768{
-                    padding: 15px 70px;
-                }
-            }
-            .button{
-                margin-top: 15px;
-            }
-            @include media-mx-768{
-                margin-top: 50px;
             }
         }
         @include media-mx-768{

@@ -20,11 +20,13 @@
 @import './layout/footer';
 @import './layout/mobile-menu';
 @import './layout/page-title';
+@import './layout/sidebar-cta';
 
 // PAGES
 @import './pages/home';
 @import './pages/about';
 @import './pages/service';
+@import './pages/case_details';
 
 // VENDORS
 @import './vendors/bootstrap';

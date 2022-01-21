@@ -164,6 +164,33 @@
         padding: 15px 0;
         margin-top: 70px;
         background: #333;
+        position: relative;
+        .btn-srt{
+            @include square(50px);
+            position: absolute;
+            background: $color;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: $white;
+            border-radius: 15px;
+            &::after{
+                @include pseudo(flex,absolute,"\f102");
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-family: $icon-font;
+                font-weight: 600;
+            }
+            @include media-mx-768{
+                right: 0;
+                left: unset;
+            }
+            @include media-mx-576{
+                @include square(30px);
+            }
+        }
+        
 
         .copyright {
             p {

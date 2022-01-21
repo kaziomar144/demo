@@ -49,26 +49,43 @@
                @include pseudo;
                @include square(100%);
                 background: $color;
-                opacity: 0.9;
                 top: 0;
                 left: 0;
                 z-index: -1;
-                visibility: hidden;
+                opacity: 0;
                 transition: all linear 0.3s;
             }
             i{
-                display: none;
-                transition: all linear 0.3s;
+               display: none;
+               transition: all linear 0.3s;
             }
             &:hover{
                 background: url(../img/bg.img) no-repeat center/cover !important;
                 padding: 15px 0;
                 &::after{
-                    visibility: visible;
+                    opacity: 0.9;
                 }
                 i{
-                    display: inline-block;
+                  display: inline-block;
                 }
             }
         
   }
+
+  .paginate-btn {
+    margin-top: 30px;
+    width: 100%;
+
+    button {
+        border-radius: unset;
+        @include fontPack(40, 600, 70);
+        color: $white;
+        background: $dark;
+        @include media-mx-992{
+            @include fontPack(30, 0, 60);
+        }
+        @include media-mx-576{
+            @include fontPack(25, 0, 30);
+        }
+    }
+}

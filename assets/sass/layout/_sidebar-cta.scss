@@ -1,0 +1,29 @@
+.sidebar_cta{
+    margin-top: 100px;
+    overflow: hidden;
+    background: $bg-c;
+    padding: 60px 20px;
+    text-align: center;
+    P{
+        color: $color;
+        @include fontPack(15,600);
+        text-transform: uppercase;
+    }
+    h3{
+        @include fontPack(42,600,60);
+        color: $black-2;
+        padding: 15px 35px;
+        @include media-mx-992{
+            padding: 15px 0;
+        }
+        @include media-mx-768{
+            padding: 15px 35px;
+        }
+    }
+    .button{
+        margin-top: 15px;
+    }
+    @include media-mx-768{
+        margin-top: 50px;
+    }
+}
