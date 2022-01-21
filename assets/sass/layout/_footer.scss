@@ -149,6 +149,9 @@
                         height: 30px;
                     }
                 }
+                @include media-mx-576{
+                    max-width: 95%;
+                }
             }
         }
 

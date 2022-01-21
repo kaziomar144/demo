@@ -1,20 +1,35 @@
-// banner area number counter
-$(document).ready(function () {
-  $('.counter').countUp({
-    'time': 2000,
-    'delay': 10
-  });
-});
 
+// change image path on Case Details
+function changeImageSrc(anything) {
+  $('.origin-img').attr('src',anything);
+}
 
 (function ($) {
   var MERCADO_JS = {
     init: function () {
+      this.mercado_counter();
       this.mercado_clone_all_zan_menus();
       this.mercado_control_mobile_menu();
       this.mercado_control_panel();
+      this.mercado_add_active_class();
     },
-    
+
+    // banner area number counter
+    mercado_counter: function(){
+      $('.counter').countUp({
+        'time': 2000,
+        'delay': 10
+      });
+    },
+
+    mercado_add_active_class: function(){
+      $('.thum > li').click(function (e) { 
+        let _this = $(this);
+        e.preventDefault();
+        _this.siblings().removeClass('active');
+        _this.addClass('active');
+      });
+    },
     /* ---------------------------------------------
 		// Clone all Zan Menus for mobile
 		---------------------------------------------*/

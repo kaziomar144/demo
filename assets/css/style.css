@@ -917,7 +917,7 @@ h6 {
 @media only screen and (max-width: 992px) {
   #cta {
     padding: 80px 0;
-    margin: 20px 0;
+    margin: 20px 0 0;
   }
 }
 
@@ -1131,6 +1131,12 @@ h6 {
 #footer_section .foot_wrap .foot_newsletter form button svg {
   width: 30px;
   height: 30px;
+}
+
+@media only screen and (max-width: 576px) {
+  #footer_section .foot_wrap .foot_newsletter form {
+    max-width: 95%;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -2181,6 +2187,10 @@ h6 {
   }
 }
 
+#details_section {
+  padding: 35px 0;
+}
+
 #details_section .col-left {
   padding-right: 50px;
   overflow: hidden;
@@ -2318,11 +2328,11 @@ h6 {
   transition: all linear 0.3s;
 }
 
-#details_section .details-content .thum li:hover::after, #details_section .details-content .thum #request_cell .cell_content .info ul li a:hover::after, #request_cell .cell_content .info ul li #details_section .details-content .thum a:hover::after {
+#details_section .details-content .thum li:hover::after, #details_section .details-content .thum #request_cell .cell_content .info ul li a:hover::after, #request_cell .cell_content .info ul li #details_section .details-content .thum a:hover::after, #details_section .details-content .thum li.active::after, #details_section .details-content .thum #request_cell .cell_content .info ul li a.active::after, #request_cell .cell_content .info ul li #details_section .details-content .thum a.active::after {
   visibility: visible;
 }
 
-#details_section .details-content .thum li:hover::before, #details_section .details-content .thum #request_cell .cell_content .info ul li a:hover::before, #request_cell .cell_content .info ul li #details_section .details-content .thum a:hover::before {
+#details_section .details-content .thum li:hover::before, #details_section .details-content .thum #request_cell .cell_content .info ul li a:hover::before, #request_cell .cell_content .info ul li #details_section .details-content .thum a:hover::before, #details_section .details-content .thum li.active::before, #details_section .details-content .thum #request_cell .cell_content .info ul li a.active::before, #request_cell .cell_content .info ul li #details_section .details-content .thum a.active::before {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -2393,6 +2403,25 @@ h6 {
 @media only screen and (max-width: 768px) {
   #details_section .details-content .content-wrap .cnt-img {
     padding: 25px 0 25px 25px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #details_section .details-content .content-wrap .cnt-img {
+    float: none;
+    padding: 15px 0;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  #details_section .details-content .content-wrap .cnt-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #details_section {
+    padding: 15px 0;
   }
 }
 
@@ -2490,6 +2519,9 @@ h6 {
 }
 
 @media only screen and (max-width: 768px) {
+  #related_case {
+    padding: 15px 0;
+  }
   #related_case .col-md-4 {
     margin-bottom: 35px;
   }
