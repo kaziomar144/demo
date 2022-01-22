@@ -20,10 +20,10 @@
   width: $size;
   height: $size;
 }
-@mixin  circle($size,$radius) {
+@mixin  circle($size) {
   width: $size;
   height: $size;
-  border-radius: $radius;
+  border-radius: 50%;
 }
 
 

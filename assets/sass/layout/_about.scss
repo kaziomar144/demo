@@ -4,36 +4,72 @@
 #about{
     padding: 35px 0;
     overflow: hidden;
-    .circle{
-        width: 195px;
-        height: 195px;
-        background: $color;
-        border-radius: 50%;
-        margin-bottom: 190px;
-        @include media-mx-992{
-            margin: 0 auto;
-        }
-    }
-    .triangle{
-        width: 0;
-        height: 0;
-        border-bottom: 193px solid $dark;
-        border-right: 193px solid transparent;
+    .about_img{
         position: relative;
+        max-width: 500px;
+        padding: 50px 50px;
         &::before{
             position: absolute;
             content: '';
             width: 11px;
             height: 234px;
-            left: 555px;
-            top: -82px;
+            bottom: 48px;
             background: #EFEFEF;
+            right: -65px;
             @include media-mx-992{
                 display: none;
             }
         }
+        img{
+            border-top-left-radius: 25%;
+        }
+        .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+           @include circle(195px);
+            background: $color;
+            margin-bottom: 190px;
+            z-index: -1;
+            @include media-mx-576{
+                @include circle(175px);
+            }
+            @media only screen and (max-width: 350px){
+                @include circle(150px);
+            }
+        }
+        .triangle{
+            @include square(213px);
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+            background: $white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            &::after{
+                @include pseudo;
+                left: 0;
+                bottom: 0;
+                @include square(193px);
+                clip-path: polygon(0 0, 0% 100%, 100% 100%);
+                background: $dark;
+            }
+            
+            @include media-mx-576{
+                @include square(175px);
+                &::after{
+                    @include square(155px);
+                }
+            }
+            @media only screen and (max-width: 350px){
+                @include square(140px);
+                &::after{
+                    @include square(120px);
+                }
+            }
+        }
         @include media-mx-992{
             margin: 0 auto;
+            
         }
     }
     .about_content{
@@ -83,6 +119,9 @@
     }
     @include media-mx-992{
             padding: 90px 0 15px;
+            .col-lg-7{
+                margin-bottom: 20px;
+            }
     }
 }
 

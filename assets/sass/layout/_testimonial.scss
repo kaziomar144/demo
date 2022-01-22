@@ -12,13 +12,115 @@
     }
     .testimonial_wrap{
         padding-top: 30px;
+
+
+        .gallery{
+            display: flex;
+            justify-content: center;
+            .thum {
+                padding: 20px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                li {
+                    margin-bottom: 20px;
+
+                    display: inline-block;
+                    position: relative;
+                    transition: all linear 0.3s;
+                    max-width: 100px;
+    
+                    img {
+                        @include square(100%);
+                    }
+    
+                    &::after {
+                        @include pseudo(block, absolute, "+");
+                        font-size: 20px;
+                        color: $white;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        visibility: hidden;
+                        transition: all linear 0.3s;
+                    }
+    
+                    &::before {
+                        @include pseudo;
+                        @include square(100%);
+                        left: 0;
+                        top: 0;
+                        background: $color;
+                        opacity: 0.9;
+                        transform: scale(0);
+                        transition: all linear 0.3s;
+                    }
+    
+                    &:hover, &.active {
+                        &::after {
+                            visibility: visible;
+                        }
+    
+                        &::before {
+                            transform: scale(1);
+                        }
+                    }
+    
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+    
+    
+            }
+            > div{
+                margin: auto 20px;
+                max-width: 375px;
+                width: 100%;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+    
+        }
         .testimonialt_content{
             padding-top: 20px;
             margin-left: 40px;
+            
             p{
                 font-size: 28px;
                 color: $dark;
                 line-height: 43px;
+                &:first-of-type{
+                    padding: 50px 0;
+                    position: relative;
+                    span{
+                        display: inline-block;
+                        @include fontPack(126,600,0);
+                        font-family: $fft;
+                        color: $color;
+                        position: absolute;
+                        &:first-of-type{
+                            top: 0;
+                            left: 0;
+                        }
+                        &:last-of-type{
+                            bottom: 0;
+                            right: 115px;
+                        }
+                        @include media-mx-992{
+                            font-size: 75px;
+                            &:last-of-type{
+                                right: 0;
+                            }
+                        }
+                    }
+                    @include media-mx-992{
+                        padding: 30px 0;
+                    }
+                }
                 &:last-of-type{
                     font-size: 15px;
                     color: $color;
@@ -43,7 +145,7 @@
                 padding-top: 0;
             }
             @include media-mx-768{
-               padding: 20px 5px 0;
+               padding: 45px 5px 0;
                margin-left: 0;
             }
         }

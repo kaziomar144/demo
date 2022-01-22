@@ -1,7 +1,18 @@
 #page-title{
-   padding: 40px 0;
+   padding: 65px 0;
    margin-bottom: 35px;
-   background: $black;
+   background: url(../img/banner.jpg) no-repeat center/cover;
+   position: relative;
+   z-index: 1;
+   &::after{
+    @include pseudo;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 40% 0, 60% 100%, 0% 100%);
+    @include square(100%);
+    background: rgba($color: $color, $alpha: 0.5);
+    z-index: -1;
+   }
    .entry-title{
        padding: 20px 0;
        h1{

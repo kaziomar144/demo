@@ -1,13 +1,53 @@
 #request_cell{
-    padding: 35px 0;
+    padding: 120px 0;
+    margin: 35px 0;
+    position: relative;
+    z-index: 1;
+    .shape{
+        @include pseudo;
+        @include square(218px);
+        background: #FE8431;
+        clip-path: polygon(100% 3%, 0% 100%, 100% 100%);
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+        &::after{
+            @include pseudo;
+            @include square(193px);
+            background: $dark-2;
+            clip-path: polygon(100% 3%, 0% 100%, 100% 100%);
+            bottom: 0;
+            right: 0;
+            z-index: 99;
+        }
+        @include media-mx-576{
+            @include square(180px);
+            &::after{
+                @include square(155px);
+            }
+        }
+    }
+    &::after{
+        @include pseudo;
+        @include square(100%);
+        left: 0;
+        top: 0;
+        background: rgba(254, 102, 0, 0.9);
+        z-index: -1;
+    }
     .cell_content{
+        padding: 20px;
         h3{
-            font-size: 1.78em;
-            font-weight: 500;
-            line-height: 1.5em;
-            margin-bottom: 12px;
+            @include fontPack(60,600,70);
+            text-transform: capitalize;
+            color: $white;
+            
+           @include media-mx-992{
+            @include fontPack(30,0,35);
+           }
            @include media-mx-768{
                 margin-bottom: 5px;
+                @include fontPack(42,0,50);
             }
         } 
         p{
@@ -15,33 +55,21 @@
             font-style: normal;
             font-weight: 400;
             text-transform: none;
-            line-height: 1.7;
-            letter-spacing: 0;
-            color: #777;
-            margin-top: 0;
-            margin-bottom: 1rem;
+            margin-top: 20px;
+            color: $white;
             @include media-mx-768{
-                text-align: justify;
+                margin-top: 0;
             }
         }
-        .info{
-            strong{
-                font-weight: 600;
-            }
-            ul{
-                margin-top: 5px;
-                li{
-                    font-size: 15px;
-                    color: $dark-shed;
-                    a{
-                        @extend li;
-                    }
-                }
-            }
+        @include media-mx-768{
+            text-align: center;
         }
     }
     
     @include media-mx-768{
-        padding: 8px 0;
+        padding: 80px 0 120px;
+    }
+    .conset-form input{
+        background-color: #FE8431;
     }
 }

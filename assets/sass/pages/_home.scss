@@ -4,8 +4,17 @@
 #banner{
     margin-bottom: 70px;
     padding: 140px 0 270px;
-    background: $dark;
+    background: url(../img/home_banner.jpg) no-repeat center/cover;
     position: relative;
+    z-index: 1;
+    &::after{
+        @include pseudo;
+        @include square(100%);
+        top: 0;
+        left: 0;
+        background: rgba($color: $dark, $alpha: 0.7);
+        z-index: -1;
+    }
     .banner_wrap{
         
         p{
@@ -41,7 +50,7 @@
     .facts_area{
         position: absolute;
         left: 0;
-        bottom: -20px;
+        bottom: -70px;
         width: 100%;
         .facts_wrap{
             background: #FE6600;
@@ -55,37 +64,77 @@
                 flex-wrap: wrap;
                 li{
                     display: inline-block;
-                    font-size: 35px;
-                    font-weight: 900;
-                    padding: 20px 85px 20px 80px;
+                    @include fontPack(35,900);
                     color: #fff;
-                    border-right: 1px solid #FF8432;
-                    &:last-child{
-                        border:none;
+                    padding: 14px 0;
+                    position: relative;
+                    &::after{
+                        @include pseudo;
+                        top: 0;
+                        right: -45px;
+                        width: 1px;
+                        height: 100%;
+                        background: #FF8432;
+                        @include media-mx-992{
+                            right: -27px;
+                        }
+                        @include media-mx-768{
+                            display: none;
+                        }
+                    }
+                    &:last-child::after{
+                       display: none;
+                    }
+                    img{
+                        @include square(38px);
+                        margin-right: 20px;
+                        @include media-mx-992{
+                            @include square(25px);
+                            margin-right: 10px;
+                        }
+                        @include media-mx-768{
+                            margin-right: 5px;
+                        }
+                        @include media-mx-576{
+                            @include square(18px);
+                        }
                     }
                     span{
                         display: block;
-                        font-size: 15px;
-                        font-weight: 600;
-                        margin-top: 15px;
+                        @include fontPack(15,600);
+                        margin-left: 70px;
                         color: $dark;
                         @include media-mx-992{
-                            font-size: 13px;
+                            font-size: 11px;
                             margin-top: 0;
+                            margin-left: 40px;
+                        }
+                        @include media-mx-768{
+                            margin-left: 10px;
+                        }
+                        @include media-mx-576{
+                            font-size: 11px;
+                            margin-left: 5px;
+                            line-height: 15px;
                         }
                     }
                     @include media-mx-992{
-                        padding: 5px 0;
+                        padding: 10px 0;
+                        font-size: 18px;
+                    }
+                    @include media-mx-576{
+                        padding: 10px 0 15px;
+                        font-size: 14px;
                     }
                 }
             }
         }
         @include media-mx-768{
-            display: none;
+            
         }
     }
     @include media-mx-992{
-        padding: 60px;
+        padding: 60px 0 100px;
         .facts_area {
             bottom: -50px;
             .facts_wrap {
@@ -98,7 +147,6 @@
         
     }
     @include media-mx-768{
-        padding-bottom: 60px;
         margin-bottom: 0;
     }
     @include media-mx-576{
@@ -117,12 +165,52 @@
 //       services section css Start
 // =================================
 #services{
-    padding: 70px 0 35px;
+    padding: 35px 0 70px;
+    margin-top: 20px;
+    background: $bg-c;
+    position: relative;
+    .shape{
+        @include pseudo;
+        @include square(218px);
+        background: $white2;
+        clip-path: polygon(100% 3%, 0% 100%, 100% 100%);
+        bottom: 0;
+        right: 0;
+        z-index: 99;
+        &::after{
+            @include pseudo;
+            @include square(193px);
+            background: $color;
+            clip-path: polygon(100% 3%, 0% 100%, 100% 100%);
+            bottom: 0;
+            right: 0;
+            z-index: 99;
+        }
+        @include media-mx-576{
+            @include square(180px);
+            &::after{
+                @include square(155px);
+            }
+        }
+    }
     .service_wrap{
         .service_content{
             margin: 80px 5px;
-            padding: 10px 30px;
-            background: $white2;
+            padding: 35px 30px;
+            background: $white;
+
+            .ser_ic{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                > div i{
+                    font-size: 45px;
+                    color: $color;
+                }
+                a{
+                    @include square(50px);
+                }
+            }
             h4{
                 font-size: 28px;
                 font-weight: 600;
@@ -158,27 +246,68 @@
                 display: none;
             }
         }
-        @include media-mx-768{
-            text-align: center;
+    }
+}
+
+// =================================
+//       Service section css End
+// =================================
+
+
+    
+// =================================
+//       Partners section css Start
+// =================================
+#partners{
+    padding: 30px 0;
+    margin: 35px 0;
+    overflow: hidden;
+    .partner_wrap{
+
+        .partner-title{
+            max-width: 300px;
+            margin-left: auto;
+            h2{
+                @include fontPack(60,600,85);
+                color: $dark-2;
+            }
+        }
+
+        .owl-carousel{
+            padding: 45px 25px;
+            .owl-nav{
+                button{
+                    position: absolute;
+                    left: -135px;
+                    @extend .btn-srt;
+                    @include square(50px)
+                }
+                .owl-prev{
+                    bottom: 30px;
+                   
+                }
+                .owl-next{
+                    top: 30px;
+                }
+            }
+        }
+        
+        .company-logo{
+            max-width: 90px;
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
-    @include media-mx-992{
-        padding: 0;
-    }
-    @include media-mx-768{
-        padding: 8px 0;
-    }
+    
 }
 
 
 // =================================
-//       Team section css End
+//       Partners section css End
 // =================================
-    
-// =================================
-//       Team section css Start
-// =================================
-
 
 
 // =================================

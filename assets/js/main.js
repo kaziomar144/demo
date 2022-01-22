@@ -1,7 +1,6 @@
-
 // change image path on Case Details
 function changeImageSrc(anything) {
-  $('.origin-img').attr('src',anything);
+  $('.origin-img').attr('src', anything);
 }
 
 (function ($) {
@@ -13,21 +12,60 @@ function changeImageSrc(anything) {
       this.mercado_control_panel();
       this.mercado_add_active_class();
     },
+    onReady: function () {
+      this.mercado_innit_carousel();
+    },
+    onResize: function () {
+      this.mercado_innit_carousel();
+    },
 
     // banner area number counter
-    mercado_counter: function(){
+    mercado_counter: function () {
       $('.counter').countUp({
         'time': 2000,
         'delay': 10
       });
     },
 
-    mercado_add_active_class: function(){
-      $('.thum > li').click(function (e) { 
+    mercado_add_active_class: function () {
+      $('.thum > li').click(function (e) {
         let _this = $(this);
         e.preventDefault();
         _this.siblings().removeClass('active');
         _this.addClass('active');
+      });
+    },
+
+    mercado_innit_carousel: function () {
+      $(".owl-carousel").each(function (index, el) {
+        var _this = $(this),
+          _owl = _this,
+          _config = _this.data(),
+          _animateOut = _this.data('animateout'),
+          _animateIn = _this.data('animatein'),
+          _slidespeed = _this.data('slidespeed');
+
+        _config.navText = ['<i class="las la-angle-double-left"></i>', '<i class="las la-angle-double-right"></i>'];
+        if (typeof _animateOut != 'undefined') {
+          _config.animateOut = _animateOut;
+        }
+        if (typeof _animateIn != 'undefined') {
+          _config.animateIn = _animateIn;
+        }
+        if (typeof (_slidespeed) != 'undefined') {
+          _config.smartSpeed = _slidespeed;
+        }
+        if ($('body').hasClass('rtl')) {
+          _config.rtl = true;
+        }
+        _owl.on('drag.owl.carousel', function (event) {
+          _owl.addClass('owl-changed');
+          setTimeout(function () {
+            _owl.removeClass('owl-changed');
+          }, _config.smartSpeed);
+        });
+        _owl.owlCarousel(_config);
+        console.log(_owl.owlCarousel(_config));
       });
     },
     /* ---------------------------------------------
@@ -168,5 +206,19 @@ function changeImageSrc(anything) {
   window.onload = function () {
     MERCADO_JS.init();
   }
+
+  /* ---------------------------------------------
+	 Scripts run when document are ready
+	 --------------------------------------------- */
+  $(document).ready(function () {
+    MERCADO_JS.onReady();
+  });
+
+  /* ---------------------------------------------
+   Scripts resize
+   --------------------------------------------- */
+  $(window).on("resize", function () {
+    MERCADO_JS.onResize();
+  });
 
 })(window.Zepto || window.jQuery, window, document);
