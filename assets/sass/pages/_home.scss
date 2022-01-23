@@ -490,11 +490,17 @@
                 }
         
             }
+            @include media-mx-576{
+                margin-top: 0;
+            }
     }
     .carousel-btn{
         margin-top: 50px;
         @include widthHeight(100%,100px);
         background: $dark;
+    }
+    @media only screen and (max-width:400px){
+        padding-top: 100px;;
     }
 }
 // =================================

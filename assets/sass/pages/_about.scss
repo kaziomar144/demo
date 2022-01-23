@@ -38,7 +38,10 @@
                         @include fontPack(30);
                         margin-right: 20px;
                     }
-                    
+                    @media only screen and (max-width:400px){
+                        @include fontPack(25);
+                        margin-right: 10px;
+                    }
                 }
                 i{
                     @extend a;
@@ -177,7 +180,6 @@
         }
         @include media-mx-992{
             padding: 20px 0 0 10px;
-            color: #fe6600cb
         }
     }
 }
