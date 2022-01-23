@@ -20,7 +20,7 @@ html {
 }
 
 html, body, div, span, img,
-ol, ul, li, a, p, h1, h2, h3,
+ol, ul, li, a, #about_section .our_mission ul li i, p, h1, h2, h3,
 h4, h5, h6, option, input, legend, label,
 table, th, td, tr, article, aside,
 caption, figure, footer, header, hgroup,
@@ -31,7 +31,7 @@ mark, nav, section, time, audio, video {
   outline: 0;
 }
 
-a {
+a, #about_section .our_mission ul li i {
   text-decoration: none;
   display: inline-block;
 }
@@ -135,7 +135,7 @@ h6 {
   color: #FFF1E7;
 }
 
-.btn-srt, #partners .partner_wrap .owl-carousel .owl-nav button {
+.btn-srt, #partners .partner_wrap .owl-carousel .owl-nav button, #portfolio .owl-carousel .owl-nav button {
   width: 68px;
   height: 68px;
   background: #F9F9F9;
@@ -144,7 +144,7 @@ h6 {
   transition: all linear 0.3s;
 }
 
-.btn-srt i, #partners .partner_wrap .owl-carousel .owl-nav button i {
+.btn-srt i, #partners .partner_wrap .owl-carousel .owl-nav button i, #portfolio .owl-carousel .owl-nav button i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,12 +156,12 @@ h6 {
   transition: all linear 0.3s;
 }
 
-.btn-srt:hover, #partners .partner_wrap .owl-carousel .owl-nav button:hover {
+.btn-srt:hover, #partners .partner_wrap .owl-carousel .owl-nav button:hover, #portfolio .owl-carousel .owl-nav button:hover {
   background: #FE6600;
   border-radius: 15px;
 }
 
-.btn-srt:hover i, #partners .partner_wrap .owl-carousel .owl-nav button:hover i {
+.btn-srt:hover i, #partners .partner_wrap .owl-carousel .owl-nav button:hover i, #portfolio .owl-carousel .owl-nav button:hover i {
   color: #fff;
 }
 
@@ -255,7 +255,7 @@ h6 {
   margin-left: 10px;
 }
 
-.social_icon ul li a {
+.social_icon ul li a, .social_icon #about_section .our_mission ul li i, #about_section .our_mission .social_icon ul li i {
   border-radius: 50%;
   background: #343434;
   width: 38px;
@@ -266,16 +266,16 @@ h6 {
   transition: all linear 0.3s;
 }
 
-.social_icon ul li a:hover {
+.social_icon ul li a:hover, .social_icon #about_section .our_mission ul li i:hover, #about_section .our_mission .social_icon ul li i:hover {
   color: #FE6600;
 }
 
-.social_icon ul li a span {
+.social_icon ul li a span, .social_icon #about_section .our_mission ul li i span, #about_section .our_mission .social_icon ul li i span {
   display: none;
 }
 
 @media only screen and (max-width: 992px) {
-  .social_icon ul li a span {
+  .social_icon ul li a span, .social_icon #about_section .our_mission ul li i span, #about_section .our_mission .social_icon ul li i span {
     display: inline-block;
   }
 }
@@ -329,14 +329,14 @@ h6 {
   left: 0;
 }
 
-#header_wrap .header_top_text a {
+#header_wrap .header_top_text a, #header_wrap .header_top_text #about_section .our_mission ul li i, #about_section .our_mission ul li #header_wrap .header_top_text i {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
   margin-right: 40px;
 }
 
-#header_wrap .header_top_text a .svg-icon {
+#header_wrap .header_top_text a .svg-icon, #header_wrap .header_top_text #about_section .our_mission ul li i .svg-icon, #about_section .our_mission ul li #header_wrap .header_top_text i .svg-icon {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -347,7 +347,7 @@ h6 {
   margin-right: 15px;
 }
 
-#header_wrap .header_top_text a .svg-icon svg {
+#header_wrap .header_top_text a .svg-icon svg, #header_wrap .header_top_text #about_section .our_mission ul li i .svg-icon svg, #about_section .our_mission ul li #header_wrap .header_top_text i .svg-icon svg {
   height: 20px;
   width: 20px;
 }
@@ -363,25 +363,25 @@ h6 {
   padding: 18px 0;
 }
 
-#header_wrap nav .logo h2 a {
+#header_wrap nav .logo h2 a, #header_wrap nav .logo h2 #about_section .our_mission ul li i, #about_section .our_mission ul li #header_wrap nav .logo h2 i {
   font-size: 38px;
   font-weight: 600;
   line-height: 55px;
   color: #2D2D2D;
 }
 
-#header_wrap nav .logo h2 a span {
+#header_wrap nav .logo h2 a span, #header_wrap nav .logo h2 #about_section .our_mission ul li i span, #about_section .our_mission ul li #header_wrap nav .logo h2 i span {
   color: #FE6600;
 }
 
 @media only screen and (max-width: 992px) {
-  #header_wrap nav .logo h2 a {
+  #header_wrap nav .logo h2 a, #header_wrap nav .logo h2 #about_section .our_mission ul li i, #about_section .our_mission ul li #header_wrap nav .logo h2 i {
     font-size: 60px;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #header_wrap nav .logo h2 a {
+  #header_wrap nav .logo h2 a, #header_wrap nav .logo h2 #about_section .our_mission ul li i, #about_section .our_mission ul li #header_wrap nav .logo h2 i {
     font-size: 45px;
   }
 }
@@ -408,7 +408,7 @@ h6 {
   display: inline-block;
 }
 
-#header_wrap nav .main_menu ul li a {
+#header_wrap nav .main_menu ul li a, #header_wrap nav .main_menu #about_section .our_mission ul li i, #about_section .our_mission #header_wrap nav .main_menu ul li i {
   font-size: 17px;
   font-weight: 600;
   color: #2D2D2D;
@@ -417,17 +417,17 @@ h6 {
   position: relative;
 }
 
-#header_wrap nav .main_menu ul li a::after {
+#header_wrap nav .main_menu ul li a::after, #header_wrap nav .main_menu #about_section .our_mission ul li i::after, #about_section .our_mission #header_wrap nav .main_menu ul li i::after {
   content: '';
   -webkit-transition: all linear 0.3s;
   transition: all linear 0.3s;
 }
 
-#header_wrap nav .main_menu ul li a:hover {
+#header_wrap nav .main_menu ul li a:hover, #header_wrap nav .main_menu #about_section .our_mission ul li i:hover, #about_section .our_mission #header_wrap nav .main_menu ul li i:hover {
   color: #FE6600;
 }
 
-#header_wrap nav .main_menu ul li a:hover::after {
+#header_wrap nav .main_menu ul li a:hover::after, #header_wrap nav .main_menu #about_section .our_mission ul li i:hover::after, #about_section .our_mission #header_wrap nav .main_menu ul li i:hover::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -441,13 +441,13 @@ h6 {
   padding-left: 40px;
 }
 
-#header_wrap nav .contact_info a {
+#header_wrap nav .contact_info a, #header_wrap nav .contact_info #about_section .our_mission ul li i, #about_section .our_mission ul li #header_wrap nav .contact_info i {
   font-size: 25px;
   font-weight: 600;
   color: #2D2D2D;
 }
 
-#header_wrap nav .contact_info a .svg-icon {
+#header_wrap nav .contact_info a .svg-icon, #header_wrap nav .contact_info #about_section .our_mission ul li i .svg-icon, #about_section .our_mission ul li #header_wrap nav .contact_info i .svg-icon {
   display: inline-block;
   width: 55px;
   height: 55px;
@@ -459,13 +459,13 @@ h6 {
 }
 
 @media only screen and (max-width: 576px) {
-  #header_wrap nav .contact_info a .svg-icon {
+  #header_wrap nav .contact_info a .svg-icon, #header_wrap nav .contact_info #about_section .our_mission ul li i .svg-icon, #about_section .our_mission ul li #header_wrap nav .contact_info i .svg-icon {
     margin-right: 0;
     width: 45px;
     height: 45px;
     line-height: 45px;
   }
-  #header_wrap nav .contact_info a .svg-icon svg {
+  #header_wrap nav .contact_info a .svg-icon svg, #header_wrap nav .contact_info #about_section .our_mission ul li i .svg-icon svg, #about_section .our_mission ul li #header_wrap nav .contact_info i .svg-icon svg {
     width: 20px;
     height: 18px;
   }
@@ -487,7 +487,7 @@ h6 {
 }
 
 #about {
-  padding: 35px 0;
+  padding: 70px 0;
   overflow: hidden;
 }
 
@@ -650,7 +650,7 @@ h6 {
   }
 }
 
-#about .about_content a {
+#about .about_content a, #about .about_content #about_section .our_mission ul li i, #about_section .our_mission ul li #about .about_content i {
   margin-top: 30px;
 }
 
@@ -719,7 +719,7 @@ h6 {
   transition: all linear 0.3s;
 }
 
-#team .team_wrap .team_img .social_icon a {
+#team .team_wrap .team_img .social_icon a, #team .team_wrap .team_img .social_icon #about_section .our_mission ul li i, #about_section .our_mission ul li #team .team_wrap .team_img .social_icon i {
   font-size: 15px;
   background: #fff;
   color: #2D2D2D;
@@ -731,14 +731,14 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  #team .team_wrap .team_img .social_icon a {
+  #team .team_wrap .team_img .social_icon a, #team .team_wrap .team_img .social_icon #about_section .our_mission ul li i, #about_section .our_mission ul li #team .team_wrap .team_img .social_icon i {
     width: 25px;
     height: 25px;
     line-height: 25px;
   }
 }
 
-#team .team_wrap .team_img .social_icon li:hover a {
+#team .team_wrap .team_img .social_icon li:hover a, #team .team_wrap .team_img .social_icon #about_section .our_mission ul li:hover i, #about_section .our_mission ul #team .team_wrap .team_img .social_icon li:hover i {
   background: #343434;
   color: #fff;
 }
@@ -803,7 +803,6 @@ h6 {
 
 #request_cell {
   padding: 120px 0;
-  margin: 35px 0;
   position: relative;
   z-index: 1;
 }
@@ -1294,7 +1293,9 @@ form.conset-form button {
 }
 
 #footer_section .foot_wrap .contact_info p,
-#footer_section .foot_wrap .contact_info a {
+#footer_section .foot_wrap .contact_info a,
+#footer_section .foot_wrap .contact_info #about_section .our_mission ul li i,
+#about_section .our_mission ul li #footer_section .foot_wrap .contact_info i {
   font-size: 15px;
   color: #d0d0d0;
   font-weight: 400;
@@ -1466,7 +1467,7 @@ form.conset-form button {
   position: relative;
 }
 
-#footer_section .footer_bottom .btn-srt, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button {
+#footer_section .footer_bottom .btn-srt, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button, #footer_section .footer_bottom #portfolio .owl-carousel .owl-nav button, #portfolio .owl-carousel .owl-nav #footer_section .footer_bottom button {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -1479,7 +1480,7 @@ form.conset-form button {
   border-radius: 15px;
 }
 
-#footer_section .footer_bottom .btn-srt::after, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button::after, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button::after {
+#footer_section .footer_bottom .btn-srt::after, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button::after, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button::after, #footer_section .footer_bottom #portfolio .owl-carousel .owl-nav button::after, #portfolio .owl-carousel .owl-nav #footer_section .footer_bottom button::after {
   content: "";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1494,14 +1495,14 @@ form.conset-form button {
 }
 
 @media only screen and (max-width: 768px) {
-  #footer_section .footer_bottom .btn-srt, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button {
+  #footer_section .footer_bottom .btn-srt, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button, #footer_section .footer_bottom #portfolio .owl-carousel .owl-nav button, #portfolio .owl-carousel .owl-nav #footer_section .footer_bottom button {
     right: 0;
     left: unset;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #footer_section .footer_bottom .btn-srt, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button {
+  #footer_section .footer_bottom .btn-srt, #footer_section .footer_bottom #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #footer_section .footer_bottom button, #footer_section .footer_bottom #portfolio .owl-carousel .owl-nav button, #portfolio .owl-carousel .owl-nav #footer_section .footer_bottom button {
     width: 30px;
     height: 30px;
   }
@@ -1561,7 +1562,7 @@ form.conset-form button {
   display: none;
 }
 
-#footer_section .footer_bottom .foot_bottom_menu ul li a {
+#footer_section .footer_bottom .foot_bottom_menu ul li a, #footer_section .footer_bottom .foot_bottom_menu #about_section .our_mission ul li i, #about_section .our_mission #footer_section .footer_bottom .foot_bottom_menu ul li i {
   color: #F7F9FB;
   font-size: 15px;
   line-height: 30px;
@@ -1569,7 +1570,7 @@ form.conset-form button {
   transition: all linear 0.3s;
 }
 
-#footer_section .footer_bottom .foot_bottom_menu ul li a:hover {
+#footer_section .footer_bottom .foot_bottom_menu ul li a:hover, #footer_section .footer_bottom .foot_bottom_menu #about_section .our_mission ul li i:hover, #about_section .our_mission #footer_section .footer_bottom .foot_bottom_menu ul li i:hover {
   color: #FE6600;
 }
 
@@ -1595,14 +1596,14 @@ form.conset-form button {
   display: none;
 }
 
-.show-up-after-992 a {
+.show-up-after-992 a, .show-up-after-992 #about_section .our_mission ul li i, #about_section .our_mission ul li .show-up-after-992 i {
   display: inline-block;
   float: left;
   padding: 3px 0;
   border: 1px solid #333;
 }
 
-.show-up-after-992 a span {
+.show-up-after-992 a span, .show-up-after-992 #about_section .our_mission ul li i span, #about_section .our_mission ul li .show-up-after-992 i span {
   display: inline-block;
   width: 30px;
   height: 2px;
@@ -1671,7 +1672,7 @@ form.conset-form button {
   background: #ddd;
 }
 
-.mercado-clone-wrap .mercado-panel > ul > li > a {
+.mercado-clone-wrap .mercado-panel > ul > li > a, .mercado-clone-wrap #about_section .our_mission .mercado-panel > ul > li > i, #about_section .our_mission .mercado-clone-wrap .mercado-panel > ul > li > i {
   display: inline-block;
   line-height: 50px;
   text-transform: uppercase;
@@ -1679,12 +1680,12 @@ form.conset-form button {
   color: #2D2D2D;
 }
 
-.mercado-clone-wrap .mercado-panel > ul > li > a span {
+.mercado-clone-wrap .mercado-panel > ul > li > a span, .mercado-clone-wrap #about_section .our_mission .mercado-panel > ul > li > i span, #about_section .our_mission .mercado-clone-wrap .mercado-panel > ul > li > i span {
   display: inline-block;
   padding-left: 10px;
 }
 
-.mercado-clone-wrap .mercado-panel > ul > li > a.icon {
+.mercado-clone-wrap .mercado-panel > ul > li > a.icon, .mercado-clone-wrap #about_section .our_mission .mercado-panel > ul > li > i.icon, #about_section .our_mission .mercado-clone-wrap .mercado-panel > ul > li > i.icon {
   right: -4px;
   top: -9px;
   float: right;
@@ -1859,13 +1860,13 @@ form.conset-form button {
   color: #FE6600;
 }
 
-#page-title .entry-title ul li a {
+#page-title .entry-title ul li a, #page-title .entry-title #about_section .our_mission ul li i, #about_section .our_mission #page-title .entry-title ul li i {
   color: #fff;
   -webkit-transition: all linear 0.3s;
   transition: all linear 0.3s;
 }
 
-#page-title .entry-title ul li a:hover {
+#page-title .entry-title ul li a:hover, #page-title .entry-title #about_section .our_mission ul li i:hover, #about_section .our_mission #page-title .entry-title ul li i:hover {
   color: #FE6600;
 }
 
@@ -1996,7 +1997,7 @@ form.conset-form button {
   }
 }
 
-#banner .banner_wrap a {
+#banner .banner_wrap a, #banner .banner_wrap #about_section .our_mission ul li i, #about_section .our_mission ul li #banner .banner_wrap i {
   margin-top: 30px;
 }
 
@@ -2199,12 +2200,12 @@ form.conset-form button {
 
 @media only screen and (max-width: 576px) {
   #services .shape {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
   #services .shape::after {
-    width: 155px;
-    height: 155px;
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -2229,7 +2230,7 @@ form.conset-form button {
   color: #FE6600;
 }
 
-#services .service_wrap .service_content .ser_ic a {
+#services .service_wrap .service_content .ser_ic a, #services .service_wrap .service_content .ser_ic #about_section .our_mission ul li i, #about_section .our_mission ul li #services .service_wrap .service_content .ser_ic i {
   width: 50px;
   height: 50px;
 }
@@ -2297,6 +2298,20 @@ form.conset-form button {
   color: #292929;
 }
 
+@media only screen and (max-width: 992px) {
+  #partners .partner_wrap .partner-title h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #partners .partner_wrap .partner-title {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 #partners .partner_wrap .owl-carousel {
   padding: 45px 25px;
 }
@@ -2308,17 +2323,42 @@ form.conset-form button {
   height: 50px;
 }
 
+@media only screen and (max-width: 992px) {
+  #partners .partner_wrap .owl-carousel .owl-nav button {
+    left: -100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #partners .partner_wrap .owl-carousel .owl-nav button {
+    display: none;
+  }
+}
+
 #partners .partner_wrap .owl-carousel .owl-nav .owl-prev {
   bottom: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  #partners .partner_wrap .owl-carousel .owl-nav .owl-prev {
+    bottom: 20px;
+  }
 }
 
 #partners .partner_wrap .owl-carousel .owl-nav .owl-next {
   top: 30px;
 }
 
+@media only screen and (max-width: 992px) {
+  #partners .partner_wrap .owl-carousel .owl-nav .owl-next {
+    top: 20px;
+  }
+}
+
 #partners .partner_wrap .company-logo {
   max-width: 90px;
   width: 100%;
+  margin: 0 auto;
 }
 
 #partners .partner_wrap .company-logo img {
@@ -2326,78 +2366,314 @@ form.conset-form button {
   height: auto;
 }
 
-#about .our_mission {
-  width: 100%;
-  height: 100%;
-  background: #F9F9F9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: right;
-  padding: 30px 50px;
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  #partners .partner_wrap .company-logo {
+    max-width: 60px;
+  }
 }
 
-#about .our_mission p {
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 70px;
-  padding: 20px 0 60px;
-  cursor: pointer;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-#about .our_mission p i {
-  display: none;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-#about .our_mission p:hover {
-  padding-right: 20px;
-}
-
-#about .our_mission p:hover i {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-  #about .our_mission p {
-    font-size: 30px;
-    line-height: 35px;
-    padding: 10px 0;
+@media only screen and (max-width: 576px) {
+  #partners .partner_wrap .company-logo {
+    max-width: 50px;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  #about .our_mission {
+  #partners .partner_wrap:first-of-type {
+    margin: auto 0 auto auto;
+    max-width: 240px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #partners .partner_wrap:first-of-type {
+    max-width: 100%;
+  }
+}
+
+#portfolio {
+  padding: 70px 0 140px;
+  margin-bottom: 35px;
+  background: #292929;
+  position: relative;
+}
+
+#portfolio .shape {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 218px;
+  height: 218px;
+  background: #4C3526;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+          clip-path: polygon(0 0, 0% 100%, 100% 0);
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#portfolio .shape::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 193px;
+  height: 193px;
+  background: #FE6600;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+          clip-path: polygon(0 0, 0% 100%, 100% 0);
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+@media only screen and (max-width: 576px) {
+  #portfolio .shape {
+    width: 140px;
+    height: 140px;
+  }
+  #portfolio .shape::after {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+#portfolio .heading h2 {
+  color: #fff;
+}
+
+#portfolio .heading p {
+  color: #BFBFBF;
+}
+
+#portfolio .owl-carousel {
+  padding: 45px 25px;
+}
+
+#portfolio .owl-carousel .owl-nav {
+  position: absolute;
+  bottom: -134px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#portfolio .owl-carousel .owl-nav button {
+  margin: 0 10px;
+  background: #4C3526;
+}
+
+#portfolio .owl-carousel .owl-nav button i {
+  color: #fff;
+}
+
+#portfolio .owl-carousel .owl-nav button:hover {
+  background: #292929;
+  border-radius: 0;
+}
+
+#portfolio .owl-carousel .owl-nav button:hover i {
+  color: #FE6600;
+}
+
+@media only screen and (max-width: 380px) {
+  #portfolio .owl-carousel .owl-nav button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #portfolio .owl-carousel .owl-nav {
+    bottom: -120px;
+  }
+}
+
+#portfolio .portfolio_wrapper {
+  padding: 0 10px;
+  margin-top: 50px;
+}
+
+#portfolio .portfolio_wrapper .portfolio-img {
+  position: relative;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+  border: 5px solid transparent;
+}
+
+#portfolio .portfolio_wrapper .portfolio-img img {
+  width: 100%;
+  height: auto;
+}
+
+#portfolio .portfolio_wrapper .portfolio-img .triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 193px solid #FE6600;
+  border-right: 193px solid transparent;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+#portfolio .portfolio_wrapper .portfolio-img .triangle .btn-srt, #partners .partner_wrap .owl-carousel .owl-nav #portfolio .portfolio_wrapper .portfolio-img .triangle button, #portfolio .portfolio_wrapper .portfolio-img .triangle .owl-carousel .owl-nav button, #portfolio .owl-carousel .owl-nav .portfolio_wrapper .portfolio-img .triangle button {
+  position: absolute;
+  background: #fff;
+  left: 20px;
+  top: 110px;
+  color: #FE6600;
+  border-radius: 15px !important;
+}
+
+#portfolio .portfolio_wrapper .portfolio-img .triangle .btn-srt:hover i, #partners .partner_wrap .owl-carousel .owl-nav #portfolio .portfolio_wrapper .portfolio-img .triangle button:hover i, #portfolio .portfolio_wrapper .portfolio-img .triangle .owl-carousel .owl-nav button:hover i, #portfolio .owl-carousel .owl-nav .portfolio_wrapper .portfolio-img .triangle button:hover i {
+  color: #FE6600 !important;
+}
+
+#portfolio .portfolio_wrapper .portfolio-img:hover {
+  border-color: #FE6600;
+}
+
+#portfolio .portfolio_wrapper .portfolio-img:hover .triangle {
+  opacity: 0.9;
+}
+
+@media only screen and (max-width: 768px) {
+  #portfolio .portfolio_wrapper .portfolio-img {
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+#portfolio .portfolio_wrapper p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.56px;
+  color: #FE6600;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  #portfolio .portfolio_wrapper p {
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+
+#portfolio .portfolio_wrapper h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  padding: 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #portfolio .portfolio_wrapper h3 {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+#portfolio .carousel-btn {
+  margin-top: 50px;
+  width: 100%;
+  height: 100px;
+  background: #2D2D2D;
+}
+
+#about_section .our_mission {
+  width: 100%;
+  height: 100%;
+  background: #F9F9F9;
+  text-align: right;
+  padding: 70px 0;
+}
+
+#about_section .our_mission ul li {
+  width: 100%;
+  padding: 20px 50px;
+  margin: 20px 0;
+  background: url(../img/bg.img) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+#about_section .our_mission ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+#about_section .our_mission ul li a, #about_section .our_mission ul li i {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 70px;
+  color: #fff;
+  margin-right: 35px;
+}
+
+@media only screen and (max-width: 576px) {
+  #about_section .our_mission ul li a, #about_section .our_mission ul li i {
+    font-size: 30px;
+    margin-right: 20px;
+  }
+}
+
+#about_section .our_mission ul li i {
+  display: none;
+}
+
+#about_section .our_mission ul li:hover i {
+  display: inline-block;
+}
+
+#about_section .our_mission ul li:hover::after {
+  background: rgba(254, 102, 0, 0.9);
+}
+
+@media only screen and (max-width: 992px) {
+  #about_section .our_mission {
     text-align: center;
     margin-bottom: 15px;
   }
 }
 
-#about .about_content h2 {
+#about_section .about_content {
+  padding: 70px 0 70px 60px;
+}
+
+#about_section .about_content h2 {
   font-size: 55px;
 }
 
 @media only screen and (max-width: 768px) {
-  #about .about_content h2 {
+  #about_section .about_content h2 {
     font-size: 40px;
   }
 }
 
-#about .about_content p span {
+#about_section .about_content p span {
   font-size: 15px;
   font-weight: 400;
   font-style: normal;
+  display: block;
+  margin-top: 20px;
 }
 
-#about .about_content .customer_wrap {
+#about_section .about_content .customer_wrap {
   max-width: 100%;
   margin: 40px 0;
   display: -webkit-box;
@@ -2408,9 +2684,8 @@ form.conset-form button {
           justify-content: space-between;
 }
 
-#about .about_content .customer_wrap .customer {
+#about_section .about_content .customer_wrap .customer {
   padding: 40px 0;
-  padding-left: 40px;
   -ms-flex-item-align: end;
   align-self: flex-end;
   max-width: 310px;
@@ -2428,36 +2703,42 @@ form.conset-form button {
       flex-wrap: wrap;
 }
 
-#about .about_content .customer_wrap .customer p {
+#about_section .about_content .customer_wrap .customer img {
+  width: 60px;
+  margin-right: 20px;
+}
+
+#about_section .about_content .customer_wrap .customer p, #about_section .about_content .customer_wrap .customer b {
   font-size: 40px;
   font-weight: 600;
   line-height: 30px;
   color: #292929;
 }
 
-#about .about_content .customer_wrap .customer p sup {
+#about_section .about_content .customer_wrap .customer p sup, #about_section .about_content .customer_wrap .customer b sup {
   color: #FE6600;
 }
 
-#about .about_content .customer_wrap .customer p strong {
+#about_section .about_content .customer_wrap .customer p strong, #about_section .about_content .customer_wrap .customer b strong {
   display: block;
   font-size: 20px;
 }
 
 @media (max-width: 280px) {
-  #about .about_content .customer_wrap .customer p {
+  #about_section .about_content .customer_wrap .customer p, #about_section .about_content .customer_wrap .customer b {
     font-size: 25px;
     line-height: 30px;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  #about .about_content .customer_wrap .customer {
-    max-width: 255px;
+  #about_section .about_content .customer_wrap .customer {
+    max-width: 98%;
+    margin: 0 auto;
   }
 }
 
-#about .about_content .customer_wrap .dots {
+#about_section .about_content .customer_wrap .dots {
   width: 73px;
   height: 73px;
   -ms-flex-item-align: center;
@@ -2474,7 +2755,7 @@ form.conset-form button {
       flex-wrap: wrap;
 }
 
-#about .about_content .customer_wrap .dots span {
+#about_section .about_content .customer_wrap .dots span {
   width: 13px;
   height: 13px;
   display: inline-block;
@@ -2484,19 +2765,32 @@ form.conset-form button {
   opacity: 0.2;
 }
 
-#about .about_content .customer_wrap .dots span:nth-child(3n+0) {
+#about_section .about_content .customer_wrap .dots span:nth-child(3n+0) {
   margin-right: 0px;
 }
 
-#about .about_content .customer_wrap .dots span:nth-child(even) {
+#about_section .about_content .customer_wrap .dots span:nth-child(even) {
   background: #000;
 }
 
 @media only screen and (max-width: 576px) {
-  #about .about_content .customer_wrap {
+  #about_section .about_content .customer_wrap .dots {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #about_section .about_content .customer_wrap {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #about_section .about_content {
+    padding: 20px 0 0 10px;
+    color: #fe6600cb;
   }
 }
 
@@ -2655,7 +2949,7 @@ form.conset-form button {
   background: #F9F9F9;
 }
 
-#service_section aside.service_sidebar .side_menu ul li a {
+#service_section aside.service_sidebar .side_menu ul li a, #service_section aside.service_sidebar .side_menu #about_section .our_mission ul li i, #about_section .our_mission #service_section aside.service_sidebar .side_menu ul li i {
   font-size: 17px;
   font-weight: 600;
   line-height: 70px;
@@ -2664,7 +2958,7 @@ form.conset-form button {
   transition: all linear 0.3s;
 }
 
-#service_section aside.service_sidebar .side_menu ul li:hover a {
+#service_section aside.service_sidebar .side_menu ul li:hover a, #service_section aside.service_sidebar .side_menu #about_section .our_mission ul li:hover i, #about_section .our_mission #service_section aside.service_sidebar .side_menu ul li:hover i {
   color: #fff;
 }
 
@@ -2724,7 +3018,7 @@ form.conset-form button {
   margin-left: 10px;
 }
 
-#details_section aside .side_info ul li a {
+#details_section aside .side_info ul li a, #details_section aside .side_info #about_section .our_mission ul li i, #about_section .our_mission #details_section aside .side_info ul li i {
   color: #FE6600;
 }
 
@@ -2930,7 +3224,7 @@ form.conset-form button {
   transition: all linear 0.3s;
 }
 
-#related_case .related-img .triangle .btn-srt, #related_case .related-img .triangle #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #related_case .related-img .triangle button {
+#related_case .related-img .triangle .btn-srt, #related_case .related-img .triangle #partners .partner_wrap .owl-carousel .owl-nav button, #partners .partner_wrap .owl-carousel .owl-nav #related_case .related-img .triangle button, #related_case .related-img .triangle #portfolio .owl-carousel .owl-nav button, #portfolio .owl-carousel .owl-nav #related_case .related-img .triangle button {
   position: absolute;
   background: #fff;
   left: 20px;
@@ -2939,7 +3233,7 @@ form.conset-form button {
   border-radius: 15px !important;
 }
 
-#related_case .related-img .triangle .btn-srt:hover i, #related_case .related-img .triangle #partners .partner_wrap .owl-carousel .owl-nav button:hover i, #partners .partner_wrap .owl-carousel .owl-nav #related_case .related-img .triangle button:hover i {
+#related_case .related-img .triangle .btn-srt:hover i, #related_case .related-img .triangle #partners .partner_wrap .owl-carousel .owl-nav button:hover i, #partners .partner_wrap .owl-carousel .owl-nav #related_case .related-img .triangle button:hover i, #related_case .related-img .triangle #portfolio .owl-carousel .owl-nav button:hover i, #portfolio .owl-carousel .owl-nav #related_case .related-img .triangle button:hover i {
   color: #FE6600 !important;
 }
 
@@ -3013,7 +3307,7 @@ form.conset-form button {
   background: #292929;
 }
 
-#contact_section aside .side_info:last-of-type h3, #contact_section aside .side_info:last-of-type a {
+#contact_section aside .side_info:last-of-type h3, #contact_section aside .side_info:last-of-type a, #contact_section aside .side_info:last-of-type #about_section .our_mission ul li i, #about_section .our_mission ul li #contact_section aside .side_info:last-of-type i {
   color: #fff;
 }
 
@@ -3045,7 +3339,7 @@ form.conset-form button {
   height: 20px;
 }
 
-#contact_section aside .side_info ul li a {
+#contact_section aside .side_info ul li a, #contact_section aside .side_info #about_section .our_mission ul li i, #about_section .our_mission #contact_section aside .side_info ul li i {
   font-size: 15px;
   font-weight: 400;
   line-height: 30px;
@@ -3055,7 +3349,7 @@ form.conset-form button {
   transition: all linear 0.3s;
 }
 
-#contact_section aside .side_info ul li a:hover {
+#contact_section aside .side_info ul li a:hover, #contact_section aside .side_info #about_section .our_mission ul li i:hover, #about_section .our_mission #contact_section aside .side_info ul li i:hover {
   color: #FE6600;
 }
 

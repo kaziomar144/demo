@@ -187,9 +187,9 @@
             z-index: 99;
         }
         @include media-mx-576{
-            @include square(180px);
+            @include square(140px);
             &::after{
-                @include square(155px);
+                @include square(120px);
             }
         }
     }
@@ -263,13 +263,20 @@
     margin: 35px 0;
     overflow: hidden;
     .partner_wrap{
-
+        
         .partner-title{
             max-width: 300px;
             margin-left: auto;
             h2{
                 @include fontPack(60,600,85);
                 color: $dark-2;
+                @include media-mx-992{
+                    @include fontPack(40,0,50);
+                }
+            }
+            @include media-mx-768{
+                margin: 0 auto;
+                text-align: center;
             }
         }
 
@@ -280,14 +287,26 @@
                     position: absolute;
                     left: -135px;
                     @extend .btn-srt;
-                    @include square(50px)
+                    @include square(50px);
+                    @include media-mx-992{
+                        left : -100px;
+                    }
+                    @include media-mx-768{
+                        display: none;
+                    }
                 }
                 .owl-prev{
                     bottom: 30px;
+                    @include media-mx-992{
+                        bottom: 20px;
+                    }
                    
                 }
                 .owl-next{
                     top: 30px;
+                    @include media-mx-992{
+                        top: 20px;
+                    }
                 }
             }
         }
@@ -295,15 +314,30 @@
         .company-logo{
             max-width: 90px;
             width: 100%;
+            margin: 0 auto;
             img{
                 width: 100%;
                 height: auto;
+            }
+            @media only screen and (min-width:768px) and (max-width:992px){
+                max-width: 60px;
+            }
+            @include media-mx-576{
+                max-width: 50px;
+            }
+        }
+        &:first-of-type{
+            @include media-mx-992{
+                margin: auto 0 auto auto;
+                max-width: 240px;
+            }
+            @include media-mx-768{
+                max-width: 100%;
             }
         }
     }
     
 }
-
 
 // =================================
 //       Partners section css End
@@ -311,10 +345,160 @@
 
 
 // =================================
-//       services section css End
+//       PORTFOLIO section css End
 // =================================
+    #portfolio{
+        padding: 70px 0 140px;
+        margin-bottom: 35px;
+        background: $dark-2;
+        position: relative;
+        .shape{
+            @include pseudo;
+            @include square(218px);
+            background: #4C3526;
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+            top: 0;
+            left: 0;
+            z-index: 99;
+            &::after{
+                @include pseudo;
+                @include square(193px);
+                background: $color;
+                clip-path: polygon(0 0, 0% 100%, 100% 0);
+                top: 0;
+                left: 0;
+                z-index: 99;
+            }
+            @include media-mx-576{
+                @include square(140px);
+                &::after{
+                    @include square(120px);
+                }
+            }
+        }
+        .heading{
+            h2{
+                color: $white;
+            }
+            p{
+                color: #BFBFBF;
+            }
+        }
+        .owl-carousel{
+            padding: 45px 25px;
+            .owl-nav{
+                position: absolute;
+                bottom: -134px;
+                left: 50%;
+                transform: translateX(-50%);
+                button{
+                    @extend .btn-srt;
+                    margin: 0 10px;
+                    background: #4C3526;
+                    i{
+                        color: $white;
+                    }
+                    &:hover{
+                        background: $dark-2;
+                        border-radius: 0;
+                        i{
+                            color: $color;
+                        }
+                    }
+                    @media only screen and (max-width:380px){
+                        @include square(45px);
+                    }
+                }
+                @media only screen and (max-width:380px){
+                    bottom: -120px;
+                }
+            }
+        }
+        .portfolio_wrapper{
+            padding: 0 10px;
+            margin-top: 50px;
+
+
+            .portfolio-img {
+                position: relative;
+                transition: all linear 0.3s;
+                border: 5px solid transparent;
+        
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+        
+                .triangle {
+                    @include square(0);
+                    border-bottom: 193px solid $color;
+                    border-right: 193px solid transparent;
+                    position: absolute;
+                    opacity: 0;
+                    left: 0;
+                    bottom: 0;
+                    transition: all linear 0.3s;
+        
+                    .btn-srt {
+                        position: absolute;
+                        background: $white;
+                        left: 20px;
+                        top: 110px;
+                        color: $color;
+                        border-radius: 15px !important;
+        
+                        &:hover i {
+                            color: $color !important;
+                        }
+                    }
+                }
+        
+                &:hover {
+                    border-color: $color;
+        
+                    .triangle {
+                       opacity: 0.9;
+                    }
+                }
+        
+                @include media-mx-768 {
+                    max-width: 85%;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+
+            p{
+                @include fontPack(14, 600, 26);
+                letter-spacing: 0.56px;
+                color: $color;
+                padding-top: 30px;
+        
+                @include media-mx-768 {
+                    text-align: center;
+                    padding-top: 15px;
+                }
+            }
+            h3 {
+                @include fontPack(25, 600, 0);
+                color: $white;
+                padding: 5px 0;
+        
+                @include media-mx-768 {
+                    text-align: center;
+                    padding: 0;
+                }
+        
+            }
+    }
+    .carousel-btn{
+        margin-top: 50px;
+        @include widthHeight(100%,100px);
+        background: $dark;
+    }
+}
 // =================================
-//       services section css Start
+//       PORTFOLIO section css Start
 // =================================
 
 

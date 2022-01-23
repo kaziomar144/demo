@@ -1,37 +1,84 @@
 // =================================
 //       About section css Start
 // =================================
-#about{
+#about_section{
     .our_mission{
         width: 100%;
         height: 100%;
         background: $bg-c;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         text-align: right;
-        padding: 30px 50px;
-        p{
-            @include fontPack(40,600,70);
-            padding: 20px 0 60px;
-            cursor: pointer;
-            transition: 0.4s;
-            i{
-                display: none;
-                transition: 0.4s;
-            }
-            &:hover{
-                padding-right: 20px;
+        padding: 70px 0;
+
+        ul{
+            li{
+                width: 100%;
+                padding: 20px 50px;
+                margin: 20px 0;
+                background: url(../img/bg.img) no-repeat center/cover;
+                position: relative;
+                z-index: 1;
+                transition: all linear 0.3s;
+                &::after{
+                    @include pseudo;
+                    @include square(100%);
+                     background: rgba($color: $black, $alpha: 0.8);
+                     top: 0;
+                     left: 0;
+                     z-index: -1;
+                     transition: all linear 0.3s;
+                 }
+
+                a{
+                    @include fontPack(42,600,70);
+                    color: $white;
+                    margin-right: 35px;
+                    @include media-mx-576{
+                        @include fontPack(30);
+                        margin-right: 20px;
+                    }
+                    
+                }
                 i{
-                    display: inline-block;
-                    margin-left: 20px;
+                    @extend a;
+                    display: none;
+                }
+                &:hover{
+                    i{
+                        display: inline-block;
+                    }
+                    &::after{
+                        background: rgba($color: $color, $alpha: 0.9)
+                    }
                 }
             }
-            @include media-mx-768{
-                font-size: 30px;
-                line-height: 35px;
-                padding: 10px 0;
-            }
         }
+
+
+
+        // p{
+        //     @include fontPack(40,600,70);
+        //     padding: 20px 0 60px;
+        //     cursor: pointer;
+        //     transition: 0.4s;
+        //     i{
+        //         display: none;
+        //         transition: 0.4s;
+        //     }
+        //     &:hover{
+        //         padding-right: 20px;
+        //         i{
+        //             display: inline-block;
+        //             margin-left: 20px;
+        //         }
+        //     }
+        //     @include media-mx-768{
+        //         font-size: 30px;
+        //         line-height: 35px;
+        //         padding: 10px 0;
+        //     }
+        // }
         @include media-mx-992{
             text-align: center;
             margin-bottom: 15px;
@@ -39,6 +86,7 @@
     }
 
     .about_content{
+        padding: 70px 0 70px 60px;
         h2{
             font-size: 55px;
             @include media-mx-768{
@@ -49,6 +97,8 @@
             span{
                @include fontPack(15,400,0);
                 font-style: normal;
+                display: block;
+                margin-top: 20px;
             }
         }
         .customer_wrap{
@@ -59,7 +109,6 @@
             
             .customer{
                 padding: 40px 0;
-                padding-left: 40px;
                 -ms-flex-item-align: end;
                 align-self: flex-end;
                 max-width: 310px;
@@ -70,7 +119,11 @@
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                p{
+                img{
+                    width: 60px;
+                    margin-right: 20px;
+                }
+                p,b{
                     @include fontPack(40,600,30);
                     color: #292929;
                     sup{
@@ -86,7 +139,8 @@
                     }
                 }
                 @include media-mx-576{
-                    max-width: 255px;
+                    max-width: 98%;
+                    margin: 0 auto;
                 }
                
             }
@@ -113,10 +167,17 @@
                         background: $black;
                     }
                 }
+                @include media-mx-576{
+                    display: none;
+                }
             }
             @include media-mx-576{
                 justify-content: space-evenly;
             }
+        }
+        @include media-mx-992{
+            padding: 20px 0 0 10px;
+            color: #fe6600cb
         }
     }
 }
